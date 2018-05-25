@@ -9,35 +9,26 @@ export class AppModelFactory {
     public static create(): ModuleDataSet[] {
         return [new ModuleDataSet(
             'AVM',
-            [new ChartDataArray('Bar Chart', ['2006', '2007', '2008', '2009', '2010', '2011', '2012'], [
-                    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-                    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+            [new ChartDataArray('Returns', ['2018', '2019', '2020', '2021', '2022', '2023', '2024'], [
+                    {data: [3.24, 4.21, 4.10, 1.2, 3.34, 3.45, 3.55], label: 'Direct Return'},
+                    {data: [3.36, 3.65, 2.5, 5.1, 3.76, 3.89, 4.1], label: 'Indirect Return'}
                 ],
                 'bar', true)
-                , new ChartDataArray('Line Chart', ['January', 'February', 'March', 'April', 'May', 'June', 'July'], [
-                    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
-                    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'},
-                    {data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C'}
+                , new ChartDataArray('Number of Properties', ['2018', '2019', '2020', '2021', '2022', '2023', '2024'], [
+                    {data: [605, 590, 610, 617, 630, 632, 632], label: 'Center'},
+                    {data: [400, 480, 500, 510, 530, 550, 555], label: 'North'},
+                    {data: [1000, 1010, 1012, 990, 990, 990, 990], label: 'South'}
                 ],
                 'line', true)
-                , new ChartDataArray('Radar Chart', ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'], [
-                    {data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'},
-                    {data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B'}
+                , new ChartDataArray('Scores', ['Social Score', 'Financial Score', 'Sustainability Score', 'Designing', 'Affordability Score', 'Tenant Score', 'Maintenance Score'], [
+                    {data: [4, 6, 8, 7, 5, 9, 10], label: 'Portfolio North'},
+                    {data: [5, 8, 6, 8, 7, 9, 9], label: 'Portfolio South'}
                 ],
                 'radar', true)
-                , new ChartDataArray('Pie Chart', ['Analyzed Complexes', 'Total Complexes'], [
+                , new ChartDataArray('Analyzed Complexes', ['Analyzed Complexes', 'Unanalyzed Complexes'], [
                     {data: [100, 80], label: 'Series A'}
                 ],
-                'pie', true)
-                , new ChartDataArray('Doughnut Chart', ['Analyzed Complexes', 'Total Complexes'], [
-                    {data: [100, 80], label: 'Series A'}
-                ],
-                'doughnut', true)
-                , new ChartDataArray('Polar Area Chart', ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'],
-                [
-                    {data: [300, 500, 100, 40, 120], label: 'Series A'}
-                ],
-                'polarArea', true)],
+                'pie', true)],
             [new ProgressData('AVM Valuation progress', 'View calculation process', 'Open AVM',
                 'AVM is still calculating, so far 112 out of 250 dwellings are valuated', 112, 250)],
             [], [], [], [], []
@@ -59,11 +50,11 @@ export class AppModelFactory {
                 [],
                 [],
                 [new Planning('Quarterly Tasks', 'Q1', 1, [
-                    'Finalize the year-transition so we can combine the past policy with the current properties.',
-                    'Start analyzing the goals & properties.',
-                ], ['Year transition', 'Goals', 'Analyze'],
+                        'Finalize the year-transition so we can combine the past policy with the current properties.',
+                        'Start analyzing the goals & properties.',
+                    ], ['Year transition', 'Goals', 'Analyze'],
                     () => {
-                     }
+                    }
                 ), new Planning('Quarterly Tasks', 'Q2', 2, [
                         'Finalize all your policy, make sure all properties have the correct policy.',
                         'Make a proposal for your subportfolio.'
