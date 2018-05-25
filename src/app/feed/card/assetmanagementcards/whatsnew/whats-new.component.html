@@ -1,7 +1,10 @@
 <mat-card class="card-feed__card">
     <mat-card-header>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
-            <span>{{data.title}}</span>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-primary">new_releases</mat-icon>
+                <span>{{data.title}}</span>
+            </div>
             <div>
                 <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                     <mat-icon>more_vert</mat-icon>
@@ -18,7 +21,8 @@
     <mat-card-content>
         <p>{{data.description}}</p>
 
-        <iframe title="What's new video" width="560" height="315" src="https://www.youtube.com/embed/LD9Oaj0B5Cc" frameborder="0"
+        <iframe title="What's new video" width="560" height="315" src="https://www.youtube.com/embed/LD9Oaj0B5Cc"
+                frameborder="0"
                 allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </mat-card-content>
 

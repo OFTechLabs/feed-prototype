@@ -1,7 +1,10 @@
 <mat-card class="card-feed__card">
     <mat-card-header>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
-            <span>{{data.title}}</span>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-primary">calendar_today</mat-icon>
+                <span>{{data.title}}</span>
+            </div>
             <div fxLayout="row" fxLayoutAlign="center center">
                 <div class="due_days" fxLayout="row" fxLayoutAlign="start center">
                     <mat-icon>calendar_today</mat-icon>

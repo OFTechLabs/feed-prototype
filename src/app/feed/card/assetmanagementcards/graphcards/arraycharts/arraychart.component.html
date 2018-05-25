@@ -1,7 +1,10 @@
 <mat-card class="card-feed__card">
     <mat-card-header>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
-            <span>{{data.title}}</span>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-primary">assessment</mat-icon>
+                <span>{{data.title}}</span>
+            </div>
             <div>
                 <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                     <mat-icon>more_vert</mat-icon>
