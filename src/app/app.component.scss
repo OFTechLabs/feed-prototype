@@ -1,5 +1,14 @@
 @import '../variables';
 
+.mat-nav-list .mat-list-item {
+    color: #555;
+}
+
+.mat-nav-list .mat-list-item.active-link {
+    background: rgba(0, 0, 0, 0.04);
+    color: $primary-700;
+}
+
 mat-sidenav {
     width: 200px;
     box-shadow: 3px 0 6px rgba(0, 0, 0, .24);

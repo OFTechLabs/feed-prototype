@@ -7,6 +7,7 @@ import {environment} from '../environments/environment';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LayoutModule} from '@angular/cdk/layout';
 import {
+    MatBadgeModule,
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
@@ -38,7 +39,8 @@ const MATERIAL_MODULES = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatBadgeModule,
 ];
 
 @NgModule({
