@@ -10,8 +10,7 @@ export class NewsCardFactory implements CardFactory<AppModel> {
         if (AppAuthorizationUtil.hasModule(model, 'AM')
             && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
 
-            return new CardFactoryResponse(
-                true,
+            return new CardFactoryResponse([
                 new DynamicCard(
                     NewsCardComponent,
                     {
@@ -23,13 +22,12 @@ export class NewsCardFactory implements CardFactory<AppModel> {
                         },
                         readMoreLink: 'http://insights.ortec-finance.com/nl-nl/2018/02/16/interactieve-conjunctuurgrafiek',
                     }
-                )
+                )]
             );
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            null,
         );
     }
 }
