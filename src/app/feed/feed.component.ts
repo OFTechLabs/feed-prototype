@@ -9,6 +9,14 @@ import {AssetmanagementAppModelFactory} from '../AssetmanagementAppModelFactory'
 import {WhatsNewAMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
 import {WhatsNewAVMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAVMCardFactory';
 import { ProgressCardFactory } from './card/assetmanagementcards/progress-card/ProgressCardFactory';
+import {PieChartCardFactory} from './card/assetmanagementcards/graphcards/piecharts/PieChartCardFactory';
+import {LineChartCardFactory} from './card/assetmanagementcards/graphcards/linechart/LineChartCardFactory';
+import {BarChartCardFactory} from './card/assetmanagementcards/graphcards/barchart/BarChartCardFactory';
+import {DoughnutChartCardFactory} from './card/assetmanagementcards/graphcards/doughnutchart/DoughnutChartCardFactory';
+import {RadarChartCardFactory} from './card/assetmanagementcards/graphcards/radarchart/RadarChartCardFactory';
+import {PolarChartComponent} from './card/assetmanagementcards/graphcards/polarchart/polarchart.component';
+import {PolarChartCardFactory} from './card/assetmanagementcards/graphcards/polarchart/PolarChartCardFactory';
+
 
 @Component({
     selector: 'feed',
@@ -35,6 +43,12 @@ export class FeedComponent implements OnInit {
             new ProgressCardFactory(),
             new WhatsNewAMCardFactory(),
             new WhatsNewAVMCardFactory(),
+            new PieChartCardFactory(),
+            new LineChartCardFactory(),
+            new BarChartCardFactory(),
+            new DoughnutChartCardFactory(),
+            new RadarChartCardFactory(),
+            new PolarChartCardFactory(),
         ]);
 
         this.cards = feedFactory.create(this.model);
