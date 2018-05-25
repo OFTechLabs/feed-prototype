@@ -19,12 +19,12 @@
     </mat-card-header>
 
     <mat-card-content fxLayout="row" class="article">
-        <div fxFlex="60">
+        <div fxFlex="60" class="article__container">
             <div fxLayout="row" class="article--title">{{data.article.title}}</div>
             <div fxLayout="row" class="article--date">{{data.article.date | date: 'EEEE, MMM dd, yyyy'}}</div>
             <div fxLayout="row" class="article--teaser">{{data.article.teaser}}</div>
         </div>
-        <div fxFlex="40" fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="40" class="article__image-container" fxLayout="row" fxLayoutAlign="center center">
             <img src="{{data.article.imageUrl}}"
                  class="article--image"
                  alt="Article image">

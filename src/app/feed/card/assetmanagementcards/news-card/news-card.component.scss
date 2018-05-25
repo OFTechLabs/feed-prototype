@@ -13,3 +13,13 @@
     max-height: 160px;
     max-width: 300px;
 }
+
+@media only screen and (max-width: 768px) {
+    .article__image-container {
+        display: none !important;
+    }
+
+    .article__container {
+        max-width: 100% !important;
+    }
+}

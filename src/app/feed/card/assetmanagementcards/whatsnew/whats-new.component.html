@@ -21,9 +21,18 @@
     <mat-card-content>
         <p>{{data.description}}</p>
 
-        <iframe title="What's new video" width="560" height="315" src="https://www.youtube.com/embed/LD9Oaj0B5Cc"
-                frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <div class="video-wrapper">
+                <iframe title="What's new video"
+                        width="650"
+                        height="400"
+                        src="https://www.youtube.com/embed/LD9Oaj0B5Cc"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </mat-card-content>
 
     <mat-card-actions>
