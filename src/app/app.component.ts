@@ -25,22 +25,4 @@ export class AppComponent implements OnInit {
         this.model = AssetmanagementAppModelFactory.create();
         this.model.moduleData = AVMAppModelFactory.create();
     }
-
-    avmTaxationManager(): void {
-        this.model = AssetmanagementAppModelFactory.create();
-        this.model.moduleData = AVMAppModelFactory.create();
-        this.model.user.roles = ['Taxationmanager'];
-    }
-
-    amAssetmanager(): void {
-        this.model = AssetmanagementAppModelFactory.create();
-        this.model.moduleData = AVMAppModelFactory.create();
-        this.model.user.roles = ['Assetmanager'];
-    }
-
-    allRoles(): void {
-        this.model = AssetmanagementAppModelFactory.create();
-        this.model.moduleData = AVMAppModelFactory.create();
-        this.model.user.roles = ['Assetmanager', 'Taxationmanager'];
-    }
 }

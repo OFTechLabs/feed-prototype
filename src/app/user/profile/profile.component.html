@@ -1,0 +1,10 @@
+<button class="profile-menu__button" mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>person</mat-icon>
+    <span>{{getUserRoleName()}}</span>
+</button>
+
+<mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item (click)="amRole()">AM User</button>
+    <button mat-menu-item (click)="avmRole()">AVM User</button>
+    <button mat-menu-item (click)="allRoles()">OF Consultant</button>
+</mat-menu>
