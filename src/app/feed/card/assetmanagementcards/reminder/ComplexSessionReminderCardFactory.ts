@@ -10,20 +10,16 @@ export class ComplexSessionReminderCardFactory implements CardFactory<AppModel> 
     create(model: AppModel): CardFactoryResponse {
         if (AppAuthorizationUtil.hasModule(model, 'AM')
             && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
-            return new CardFactoryResponse(
-                [new DynamicCard(ReminderComponent,
-                    0,
-                    {
-                        title: 'Complex Session ' + model.complexes[12].complexName,
-                        description: 'Complex ' + model.complexes[12].complexName + ' has a complex session coming up. Make sure all preparations are done.',
-                        daysLeft: 3,
-                        actions: ['Go to ' + model.complexes[12].complexName],
-                        dismiss: () => {}
-                    })]);
-        }
 
-        return new CardFactoryResponse(
-            []
-        );
+            const cards = model.moduleData.map(entry => entry.ReminderSet
+                .map(dataPoint => {
+                    return new DynamicCard(
+                        ReminderComponent,
+                        3,
+                        dataPoint,
+                    );
+                })).reduce((left, right) => left.concat(right), []);
+            return new CardFactoryResponse(cards);
+        }
     }
 }

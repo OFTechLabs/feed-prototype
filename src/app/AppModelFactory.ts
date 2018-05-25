@@ -4,6 +4,7 @@ import {ProgressData} from './feed/card/assetmanagementcards/progress-card/Progr
 import {NewsData} from './feed/card/assetmanagementcards/news-card/NewsModel';
 import {Planning} from './feed/card/assetmanagementcards/planning/PlanningModel';
 import {WhatsNewModel} from './feed/card/assetmanagementcards/whatsnew/WhatsNewModel';
+import {ReminderModel} from './feed/card/assetmanagementcards/reminder/ReminderModel';
 
 export class AppModelFactory {
 
@@ -70,7 +71,9 @@ export class AppModelFactory {
                         'Start strategy for next year',
                     ], ['Year transition', 'Formulate strategy'], () => {
                     }
-                )], [], [], [ new WhatsNewModel('AM 2018.9',
+                )], [new ReminderModel('Policy Proposal', 'A proposed variant is required to finalize the policy for this year',
+                    21, ['Propose a Variant'], () => {
+                    })], [], [new WhatsNewModel('AM 2018.9',
                     'New version of AM is available! The new features can be seen in the demo below. It is now possible to use newlybuilt.'
                     , 'https://www.youtube.com/embed/LD9Oaj0B5Cc', ['Go to AM', 'Go to Newlybuilt'], () => {
                     })]

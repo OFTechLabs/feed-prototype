@@ -42,7 +42,7 @@ export class ModuleDataSet {
                 public ProgressDataSet: ProgressData[],
                 public NewsDataSet: NewsData[],
                 public PlanningSet: Planning[],
-                public ReminderSer: ReminderModel[],
+                public ReminderSet: ReminderModel[],
                 public UpdatesSet: UpdatesModel[],
                 public WhatsNewSet: WhatsNewModel[]) {
     }
