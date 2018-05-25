@@ -3,7 +3,8 @@ export class AppModel {
         public user: User,
         public modules: Module[],
         public complexes: Complex[],
-        public avmData: AvmDataSet[]
+        public avmData: AvmDataSet[],
+        public quarter: number,
     ) {
     }
 }

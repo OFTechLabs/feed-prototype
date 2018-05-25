@@ -3,8 +3,9 @@ import {AppAuthorizationUtil} from '../../../../AppAuthorizationUtil';
 import {DynamicCard} from '../../DynamicCard';
 import {CardFactoryResponse} from '../../CardFactoryResponse';
 import {ReminderComponent} from './reminder.component';
+import {CardFactory} from '../../CardFactory';
 
-export class ProposeVariantCardFactory {
+export class ProposeVariantCardFactory implements CardFactory<AppModel> {
     create(model: AppModel): CardFactoryResponse {
         if (AppAuthorizationUtil.hasModule(model, 'AM')
             && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {

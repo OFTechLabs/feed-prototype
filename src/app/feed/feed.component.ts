@@ -1,22 +1,23 @@
-import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
-import { DynamicCard } from './card/DynamicCard';
-import { CardDirective } from './card/card.directive';
-import { FeedFactory } from './FeedFactory';
-import { AppModel } from '../AppModel';
-import { CardComponent } from './card/CardComponent';
-import { AssetmanagementAppModelFactory } from '../AssetmanagementAppModelFactory';
-import { WhatsNewAMCardFactory } from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
-import { WhatsNewAVMCardFactory } from './card/assetmanagementcards/whatsnew/WhatsNewAVMCardFactory';
-import { ProgressCardFactory } from './card/assetmanagementcards/progress-card/ProgressCardFactory';
-import { PieChartCardFactory } from './card/assetmanagementcards/graphcards/piecharts/PieChartCardFactory';
-import { LineChartCardFactory } from './card/assetmanagementcards/graphcards/linechart/LineChartCardFactory';
-import { BarChartCardFactory } from './card/assetmanagementcards/graphcards/barchart/BarChartCardFactory';
-import { DoughnutChartCardFactory } from './card/assetmanagementcards/graphcards/doughnutchart/DoughnutChartCardFactory';
-import { RadarChartCardFactory } from './card/assetmanagementcards/graphcards/radarchart/RadarChartCardFactory';
-import { PolarChartCardFactory } from './card/assetmanagementcards/graphcards/polarchart/PolarChartCardFactory';
-import { NewsCardFactory } from './card/assetmanagementcards/news-card/NewsCardFactory';
-import { ProposeVariantCardFactory } from './card/assetmanagementcards/reminder/ProposeVariantCardFactory';
-import { ComplexSessionReminderCardFactory } from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
+import {Component, ComponentFactoryResolver, OnInit, ViewChild} from '@angular/core';
+import {DynamicCard} from './card/DynamicCard';
+import {CardDirective} from './card/card.directive';
+import {FeedFactory} from './FeedFactory';
+import {AppModel} from '../AppModel';
+import {CardComponent} from './card/CardComponent';
+import {AssetmanagementAppModelFactory} from '../AssetmanagementAppModelFactory';
+import {WhatsNewAMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
+import {WhatsNewAVMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAVMCardFactory';
+import {ProgressCardFactory} from './card/assetmanagementcards/progress-card/ProgressCardFactory';
+import {ProposeVariantCardFactory} from './card/assetmanagementcards/reminder/ProposeVariantCardFactory';
+import {PieChartCardFactory} from './card/assetmanagementcards/graphcards/piecharts/PieChartCardFactory';
+import {LineChartCardFactory} from './card/assetmanagementcards/graphcards/linechart/LineChartCardFactory';
+import {BarChartCardFactory} from './card/assetmanagementcards/graphcards/barchart/BarChartCardFactory';
+import {DoughnutChartCardFactory} from './card/assetmanagementcards/graphcards/doughnutchart/DoughnutChartCardFactory';
+import {RadarChartCardFactory} from './card/assetmanagementcards/graphcards/radarchart/RadarChartCardFactory';
+import {PolarChartCardFactory} from './card/assetmanagementcards/graphcards/polarchart/PolarChartCardFactory';
+import {ComplexSessionReminderCardFactory} from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
+import {AMThisQuarterModelFactory} from './card/assetmanagementcards/planning/AMThisQuarterModelFactory';
+import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFactory';
 
 @Component({
     selector: 'feed',
@@ -41,6 +42,7 @@ export class FeedComponent implements OnInit {
         const feedFactory = new FeedFactory<AppModel>([
             new ComplexSessionReminderCardFactory(),
             new ProposeVariantCardFactory(),
+            new AMThisQuarterModelFactory(),
             new ProgressCardFactory(),
             new WhatsNewAMCardFactory(),
             new WhatsNewAVMCardFactory(),

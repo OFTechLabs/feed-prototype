@@ -18,7 +18,8 @@ export class AVMAppModelFactory {
                     ],
                     'bar'
                 )
-            ]
+            ],
+            2
         );
     }
 }

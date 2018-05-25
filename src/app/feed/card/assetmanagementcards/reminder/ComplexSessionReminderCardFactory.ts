@@ -3,8 +3,9 @@ import {AppAuthorizationUtil} from '../../../../AppAuthorizationUtil';
 import {DynamicCard} from '../../DynamicCard';
 import {ReminderComponent} from './reminder.component';
 import {CardFactoryResponse} from '../../CardFactoryResponse';
+import {CardFactory} from '../../CardFactory';
 
-export class ComplexSessionReminderCardFactory {
+export class ComplexSessionReminderCardFactory implements CardFactory<AppModel> {
 
     create(model: AppModel): CardFactoryResponse {
         if (AppAuthorizationUtil.hasModule(model, 'AM')
