@@ -1,8 +1,9 @@
-import { ModuleDataSet } from './AppModel';
+import {ModuleDataSet} from './AppModel';
 import {ChartDataArray} from './feed/card/assetmanagementcards/graphcards/ChartArrayModel';
 import {ProgressData} from './feed/card/assetmanagementcards/progress-card/ProgressModel';
 import {NewsData} from './feed/card/assetmanagementcards/news-card/NewsModel';
 import {Planning} from './feed/card/assetmanagementcards/planning/PlanningModel';
+import {WhatsNewModel} from './feed/card/assetmanagementcards/whatsnew/WhatsNewModel';
 
 export class AppModelFactory {
 
@@ -31,7 +32,11 @@ export class AppModelFactory {
                 'pie', true)],
             [new ProgressData('AVM Valuation progress', 'View calculation process', 'Open AVM',
                 'AVM is still calculating, so far 112 out of 250 dwellings are valuated', 112, 250)],
-            [], [], [], [], []
+            [], [], [], [],
+            [new WhatsNewModel('AVM 2018.9',
+                'New version of AVM is available! The new features can be seen in the demo below. AVM now has a dashboard with the most relevant information about your properties.'
+                , 'https://www.youtube.com/embed/LD9Oaj0B5Cc', ['Go to AVM', 'Go to Dashboard'], () => {
+                })]
         ),
             new ModuleDataSet(
                 'Ortec Finance',
@@ -65,7 +70,10 @@ export class AppModelFactory {
                         'Start strategy for next year',
                     ], ['Year transition', 'Formulate strategy'], () => {
                     }
-                )], [], [], []
+                )], [], [], [ new WhatsNewModel('AM 2018.9',
+                    'New version of AM is available! The new features can be seen in the demo below. It is now possible to use newlybuilt.'
+                    , 'https://www.youtube.com/embed/LD9Oaj0B5Cc', ['Go to AM', 'Go to Newlybuilt'], () => {
+                    })]
             )];
     }
 }

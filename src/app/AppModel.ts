@@ -44,7 +44,7 @@ export class ModuleDataSet {
                 public PlanningSet: Planning[],
                 public ReminderSer: ReminderModel[],
                 public UpdatesSet: UpdatesModel[],
-                public WatsNewSet: WhatsNewModel[]) {
+                public WhatsNewSet: WhatsNewModel[]) {
     }
 }
 

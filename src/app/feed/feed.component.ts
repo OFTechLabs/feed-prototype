@@ -5,7 +5,6 @@ import {FeedFactory} from './FeedFactory';
 import {AppModel} from '../AppModel';
 import {CardComponent} from './card/CardComponent';
 import {WhatsNewAMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
-import {WhatsNewAVMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAVMCardFactory';
 import {ProgressCardFactory} from './card/assetmanagementcards/progress-card/ProgressCardFactory';
 import {ProposeVariantCardFactory} from './card/assetmanagementcards/reminder/ProposeVariantCardFactory';
 import {ComplexSessionReminderCardFactory} from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
@@ -53,7 +52,6 @@ export class FeedComponent implements OnInit {
             new ComplexesAnalyzedCardFactory(),
             new ProgressCardFactory(),
             new WhatsNewAMCardFactory(),
-            new WhatsNewAVMCardFactory(),
             new NewsCardFactory(),
             new UpdatesCardFactory(),
             new AvmChartFeedFactory(),

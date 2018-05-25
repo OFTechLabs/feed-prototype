@@ -6,12 +6,7 @@ import {CardComponent} from '../../CardComponent';
     styleUrls: ['./whats-new.component.scss'],
 })
 export class WhatsNewComponent implements CardComponent {
-    @Input() data: {
-        title: string,
-        description: string,
-        url: string,
-        actions: string[],
-        dismiss: () => void;
-    };
-}
+    @Input() data: any;
+    }
+
 
