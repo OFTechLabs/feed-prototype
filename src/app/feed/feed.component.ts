@@ -22,8 +22,8 @@ export class FeedComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.loadCards();
         this.model = AssetmanagementAppModelFactory.create();
+        this.loadCards();
     }
 
     loadCards() {
