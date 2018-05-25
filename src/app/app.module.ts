@@ -59,8 +59,8 @@ const MATERIAL_MODULES = [
         RadarChartComponent,
         PolarChartComponent,
         ProgressCardComponent,
-        ReminderComponent,
         NewsCardComponent,
+        ReminderComponent,
     ],
     entryComponents: [
         ComplexesAnalyzedComponent,
@@ -72,10 +72,8 @@ const MATERIAL_MODULES = [
         DoughnutChartComponent,
         RadarChartComponent,
         PolarChartComponent,
-        PolarChartComponent,
-        ReminderComponent,
         NewsCardComponent,
-    ],
+        ReminderComponent],
     imports: [
         BrowserModule,
         ServiceWorkerModule.register(environment.serviceWorkerLocation, {enabled: environment.production}),

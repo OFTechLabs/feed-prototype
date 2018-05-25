@@ -1,0 +1,33 @@
+<mat-card class="card-feed__card">
+    <mat-card-header>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
+            <span>Ortec Finance News Update</span>
+            <div>
+                <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>Pin to top</button>
+                    <button mat-menu-item>Don't show again</button>
+                    <button mat-menu-item (click)="data.dismiss()">Remove from feed</button>
+                </mat-menu>
+            </div>
+        </div>
+    </mat-card-header>
+
+    <mat-card-content fxLayout="row" class="article">
+        <div fxFlex="60">
+            <div fxLayout="row" class="article--title">{{data.article.title}}</div>
+            <div fxLayout="row" class="article--date">{{data.article.date | date: 'EEEE, MMM dd, yyyy'}}</div>
+            <div fxLayout="row" class="article--teaser">{{data.article.teaser}}</div>
+        </div>
+        <div fxFlex="40" fxLayout="row" fxLayoutAlign="center center">
+            <img src="{{data.article.imageUrl}}"
+                 class="article--image">
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a mat-button class="mat-primary" href="{{data.readMoreLink}}" target="_blank">Read more</a>
+    </mat-card-actions>
+</mat-card>
