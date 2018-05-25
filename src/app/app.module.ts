@@ -31,6 +31,8 @@ import {BarChartComponent} from './feed/card/assetmanagementcards/graphcards/bar
 import {DoughnutChartComponent} from './feed/card/assetmanagementcards/graphcards/doughnutchart/doughnutchart.component';
 import {RadarChartComponent} from './feed/card/assetmanagementcards/graphcards/radarchart/radarchart.component';
 import {PolarChartComponent} from './feed/card/assetmanagementcards/graphcards/polarchart/polarchart.component';
+import { ProgressCardComponent } from './feed/card/assetmanagementcards/progress-card/progress-card.component';
+import {ReminderComponent} from './feed/card/assetmanagementcards/reminder/reminder.component';
 
 @NgModule({
     declarations: [
@@ -46,8 +48,10 @@ import {PolarChartComponent} from './feed/card/assetmanagementcards/graphcards/p
         DoughnutChartComponent,
         RadarChartComponent,
         PolarChartComponent,
+        ReminderComponent,
     ],
-    entryComponents: [ComplexesAnalyzedComponent,
+    entryComponents: [
+    	ComplexesAnalyzedComponent,
         WhatsNewComponent,
         ProgressCardComponent,
         PieChartComponent,
@@ -55,7 +59,9 @@ import {PolarChartComponent} from './feed/card/assetmanagementcards/graphcards/p
         BarChartComponent,
         DoughnutChartComponent,
         RadarChartComponent,
-        PolarChartComponent],
+        PolarChartComponent,
+        ReminderComponent
+        ],
     imports: [
         BrowserModule,
         ServiceWorkerModule.register(environment.serviceWorkerLocation, {enabled: environment.production}),
