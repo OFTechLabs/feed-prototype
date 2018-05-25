@@ -3,9 +3,10 @@
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
             <span>{{data.title}}</span>
             <div fxLayout="row" fxLayoutAlign="center center">
-                <span class="due_days">
-                    {{data.quarter}}
-                </span>
+                <div class="due_days" fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>calendar_today</mat-icon>
+                    <span>{{data.quarter}}</span>
+                </div>
                 <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                     <mat-icon>more_vert</mat-icon>
                 </button>

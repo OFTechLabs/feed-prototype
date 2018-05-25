@@ -4,7 +4,7 @@ import {ThisQuarterModel} from './ThisQuarterModel';
 
 @Component({
     templateUrl: './this-quarter.component.html',
-    styleUrls: ['./this-quarter.component.css']
+    styleUrls: ['./this-quarter.component.scss']
 })
 export class ThisQuarterComponent implements CardComponent {
     @Input() data: ThisQuarterModel;

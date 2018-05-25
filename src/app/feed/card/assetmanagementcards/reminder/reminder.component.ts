@@ -4,7 +4,7 @@ import {ReminderModel} from './ReminderModel';
 
 @Component({
     templateUrl: './reminder.component.html',
-    styleUrls: ['./reminder.component.css']
+    styleUrls: ['./reminder.component.scss']
 })
 export class ReminderComponent implements CardComponent {
     @Input() data: ReminderModel;

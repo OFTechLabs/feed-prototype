@@ -1,0 +1,10 @@
+@import '../../../../../variables';
+
+.due_days {
+    color: $primary;
+    font-size: 120%;
+}
+
+.due_days mat-icon {
+    margin-right: 4px;
+}
