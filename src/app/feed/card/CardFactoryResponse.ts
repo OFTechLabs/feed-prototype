@@ -2,20 +2,13 @@ import {DynamicCard} from './DynamicCard';
 
 export class CardFactoryResponse {
 
-    constructor(hasCard: boolean, card: DynamicCard) {
-        this._hasCard = hasCard;
-        this._card = card;
+    constructor(cards: DynamicCard[]) {
+        this._cards = cards;
     }
 
-    private _hasCard: boolean;
+    private _cards: DynamicCard[];
 
-    get hasCard(): boolean {
-        return this._hasCard;
-    }
-
-    private _card: DynamicCard;
-
-    get card(): DynamicCard {
-        return this._card;
+    get cards(): DynamicCard[] {
+        return this._cards;
     }
 }

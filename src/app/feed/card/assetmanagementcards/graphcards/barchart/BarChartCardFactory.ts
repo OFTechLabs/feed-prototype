@@ -9,11 +9,8 @@ export class BarChartCardFactory implements CardFactory<AppModel> {
     create(model: AppModel): CardFactoryResponse {
         if (AppAuthorizationUtil.hasModule(model, 'AM')
             && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
-            const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
-
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(BarChartComponent,
+                [new DynamicCard(BarChartComponent,
                     {
                         title: 'Bar Chart',
                         barChartLabels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012'],
@@ -23,12 +20,11 @@ export class BarChartCardFactory implements CardFactory<AppModel> {
                         ],
                         barChartType: 'bar',
                         barChartLegend: true
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

@@ -12,8 +12,7 @@ export class LineChartCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(LineChartComponent,
+                [new DynamicCard(LineChartComponent,
                     {
                         title: 'Line Chart',
                         lineChartLabels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -53,12 +52,11 @@ export class LineChartCardFactory implements CardFactory<AppModel> {
                         ],
                         lineChartLegend: true,
                         lineChartType: 'line'
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

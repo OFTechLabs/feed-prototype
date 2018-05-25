@@ -12,19 +12,17 @@ export class DoughnutChartCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(DoughnutChartComponent,
+                [new DynamicCard(DoughnutChartComponent,
                     {
                         title: 'Doughnut Chart',
                         ChartLabels: ['Analyzed Complexes', 'Total Complexes'],
                         ChartData: [analyzedComplexes, model.complexes.length],
                         ChartType: 'doughnut'
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

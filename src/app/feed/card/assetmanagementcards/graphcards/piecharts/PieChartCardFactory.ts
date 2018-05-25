@@ -12,19 +12,17 @@ export class PieChartCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(PieChartComponent,
+                [new DynamicCard(PieChartComponent,
                     {
                         title: 'Pie Chart',
                         pieChartLabels: ['Analyzed Complexes', 'Total Complexes'],
                         pieChartData: [analyzedComplexes, model.complexes.length],
                         pieChartType: 'pie'
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

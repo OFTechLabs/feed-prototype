@@ -18,18 +18,16 @@ export class ProgressCardFactory implements CardFactory<AppModel> {
                 'Ut commodo neque urna, in malesuada libero tristique nec. ';
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(ProgressCardComponent,
+                [new DynamicCard(ProgressCardComponent,
                     {
                         explanation: description,
                         progressValue: analyzedComplexes,
                         totalValue: model.complexes.length,
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

@@ -12,20 +12,18 @@ export class PolarChartCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(PolarChartComponent,
+                [new DynamicCard(PolarChartComponent,
                     {
                         title: 'Polar Chart',
                         ChartLabels: ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'],
                         ChartData: [300, 500, 100, 40, 120],
                         Legend: true,
                         ChartType: 'polarArea'
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

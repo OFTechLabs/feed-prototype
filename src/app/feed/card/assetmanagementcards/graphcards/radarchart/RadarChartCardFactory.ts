@@ -12,8 +12,7 @@ export class RadarChartCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(RadarChartComponent,
+                [new DynamicCard(RadarChartComponent,
                     {
                         title: 'Radar Chart',
                         ChartLabels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
@@ -22,12 +21,11 @@ export class RadarChartCardFactory implements CardFactory<AppModel> {
                             {data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B'}
                         ],
                         ChartType: 'radar'
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }

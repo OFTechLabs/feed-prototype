@@ -11,7 +11,7 @@ export class FeedFactory<MODEL> {
 
     public create(model: MODEL): DynamicCard[] {
         return this.cardFactories.map(factory => factory.create(model))
-            .filter(response => response.hasCard)
-            .map(response => response.card);
+            .map(response => response.cards)
+            .reduce((left, right) => left.concat(right), []);
     }
 }

@@ -12,17 +12,15 @@ export class ComplexesAnalyzedCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                true,
-                new DynamicCard(ComplexesAnalyzedComponent,
+                [new DynamicCard(ComplexesAnalyzedComponent,
                     {
                         analyzedComplexes: analyzedComplexes,
                         totalComplexes: model.complexes.length
-                    }));
+                    })]);
         }
 
         return new CardFactoryResponse(
-            false,
-            null
+            []
         );
     }
 }
