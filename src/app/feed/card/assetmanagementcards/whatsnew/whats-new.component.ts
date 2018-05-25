@@ -8,7 +8,9 @@ export class WhatsNewComponent implements CardComponent {
     @Input() data: {
         title: string,
         description: string,
-        url: string
+        url: string,
+        actions: string[],
+        dismiss: () => void;
     };
 }
 

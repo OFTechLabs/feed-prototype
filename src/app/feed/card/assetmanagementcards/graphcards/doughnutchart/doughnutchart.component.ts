@@ -11,7 +11,8 @@ export class DoughnutChartComponent implements CardComponent {
         title: string,
         ChartLabels: string[],
         ChartData: any[],
-        ChartType: string
+        ChartType: string,
+        ChartOptions: any,
     };
 
     // events

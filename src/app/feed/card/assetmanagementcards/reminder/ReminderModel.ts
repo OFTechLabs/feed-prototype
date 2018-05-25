@@ -4,7 +4,8 @@ export class ReminderModel {
         public title: string,
         public description: string,
         public daysLeft: number,
-        public actions: string[]
+        public actions: string[],
+        public dismiss: () => void,
     ) {
     }
 }

@@ -12,7 +12,8 @@ export class BarChartComponent implements CardComponent {
         barChartLabels: string[],
         barChartData: any[],
         barChartType: string,
-        barChartLegend: boolean
+        barChartLegend: boolean,
+        barChartOptions: any,
     };
 
     // events

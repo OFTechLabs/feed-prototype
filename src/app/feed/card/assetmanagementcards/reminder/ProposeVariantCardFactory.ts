@@ -14,7 +14,8 @@ export class ProposeVariantCardFactory {
                         title: 'Policy Proposal',
                         description: 'A proposed variant is required to finalize the policy for this year',
                         daysLeft: 21,
-                        actions: ['Go to AM', 'Propose a Variant']
+                        actions: ['Go to AM', 'Propose a Variant'],
+                        dismiss: () => {}
                     })]);
         }
 
