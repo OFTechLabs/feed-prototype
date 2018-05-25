@@ -8,7 +8,6 @@ import { AssetmanagementAppModelFactory } from '../AssetmanagementAppModelFactor
 import { WhatsNewAMCardFactory } from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
 import { WhatsNewAVMCardFactory } from './card/assetmanagementcards/whatsnew/WhatsNewAVMCardFactory';
 import { ProgressCardFactory } from './card/assetmanagementcards/progress-card/ProgressCardFactory';
-import { ProposeVariantCardFactory } from './card/assetmanagementcards/reminder/ProposeVariantCardFactory';
 import { PieChartCardFactory } from './card/assetmanagementcards/graphcards/piecharts/PieChartCardFactory';
 import { LineChartCardFactory } from './card/assetmanagementcards/graphcards/linechart/LineChartCardFactory';
 import { BarChartCardFactory } from './card/assetmanagementcards/graphcards/barchart/BarChartCardFactory';
@@ -16,6 +15,7 @@ import { DoughnutChartCardFactory } from './card/assetmanagementcards/graphcards
 import { RadarChartCardFactory } from './card/assetmanagementcards/graphcards/radarchart/RadarChartCardFactory';
 import { PolarChartCardFactory } from './card/assetmanagementcards/graphcards/polarchart/PolarChartCardFactory';
 import { NewsCardFactory } from './card/assetmanagementcards/news-card/NewsCardFactory';
+import { ProposeVariantCardFactory } from './card/assetmanagementcards/reminder/ProposeVariantCardFactory';
 import { ComplexSessionReminderCardFactory } from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
 
 @Component({
