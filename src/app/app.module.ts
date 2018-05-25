@@ -20,6 +20,7 @@ import {
 import {FeedComponent} from './feed/feed.component';
 import {CardDirective} from './feed/card/card.directive';
 import {ComplexesAnalyzedComponent} from './feed/card/assetmanagementcards/complexesanalyzedcard/complexes-analyzed.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
     declarations: [
@@ -42,7 +43,8 @@ import {ComplexesAnalyzedComponent} from './feed/card/assetmanagementcards/compl
         MatListModule,
         MatGridListModule,
         MatCardModule,
-        MatMenuModule
+        MatMenuModule,
+        FlexLayoutModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
