@@ -31,9 +31,17 @@ export class AppModelFactory {
                     {data: [100, 80], label: 'Series A'}
                 ],
                 'pie', true)],
-            [new ProgressData('AVM Valuation progress', 'View calculation process', 'Open AVM',
-                'AVM is still calculating, so far 112 out of 250 dwellings are valuated', 112, 250)],
-            [], [], [], [],
+            [
+                new ProgressData(
+                    'AVM Valuation progress',
+                    'View calculation process',
+                    'Open AVM',
+                    'AVM is still calculating, so far 112 out of 250 dwellings are valuated',
+                    112,
+                    250,
+                    'Taxationmanager')
+            ],
+            [], [], [], [], 
             [new WhatsNewModel('AVM 2018.9',
                 'New version of AVM is available! The new features can be seen in the demo below. AVM now has a dashboard with the most relevant information about your properties.'
                 , 'https://www.youtube.com/embed/LD9Oaj0B5Cc', ['Go to AVM', 'Go to Dashboard'], () => {
@@ -53,7 +61,17 @@ export class AppModelFactory {
             new ModuleDataSet(
                 'AM',
                 [],
-                [],
+                [
+                    new ProgressData(
+                        'Complexes',
+                        'View Unanalyzed Complexes',
+                        'View C026',
+                        'Out of 231 complexes 116 have already been analyzed, try and analyze all complexes every year.',
+                        116,
+                        231,
+                        'Assetmanager'
+                    )
+                ],
                 [],
                 [new Planning('Quarterly Tasks', 'Q1', 1, [
                         'Finalize the year-transition so we can combine the past policy with the current properties.',

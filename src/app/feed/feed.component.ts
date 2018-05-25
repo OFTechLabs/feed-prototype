@@ -12,7 +12,6 @@ import {AMThisQuarterModelFactory} from './card/assetmanagementcards/planning/AM
 import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFactory';
 import {AvmChartFeedFactory} from './card/assetmanagementcards/graphcards/ChartFeedFactory';
 import {UpdatesCardFactory} from './card/assetmanagementcards/update/UpdatesCardFactory';
-import {ComplexesAnalyzedCardFactory} from './card/assetmanagementcards/complexesanalyzedcard/ComplexesAnalyzedCardFactory';
 import {WarningCardsFactory} from './card/assetmanagementcards/warnings/WarningCardsFactory';
 
 @Component({
@@ -49,7 +48,6 @@ export class FeedComponent implements OnInit {
             new ComplexSessionReminderCardFactory(),
             new ProposeVariantCardFactory(),
             new AMThisQuarterModelFactory(),
-            new ComplexesAnalyzedCardFactory(),
             new ProgressCardFactory(),
             new WhatsNewAMCardFactory(),
             new NewsCardFactory(),

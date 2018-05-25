@@ -4,6 +4,7 @@ export class ProgressData {
                 public action2: string,
                 public explanation: string,
                 public progressValue: number,
-                public totalValue: number) {
+                public totalValue: number,
+                public role: string) {
     }
 }
