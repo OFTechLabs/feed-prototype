@@ -41,6 +41,9 @@ export class FeedComponent implements OnInit {
 
             const componentRef = viewContainerRef.createComponent(componentFactory);
             (<CardComponent>componentRef.instance).data = card.data;
+            (<CardComponent>componentRef.instance).data.dismiss = () => {
+                componentRef.destroy();
+            };
         });
     }
 }
