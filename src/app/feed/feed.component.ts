@@ -5,6 +5,7 @@ import {FeedFactory} from './FeedFactory';
 import {ComplexesAnalyzedCardFactory} from './card/assetmanagementcards/complexesanalyzedcard/ComplexesAnalyzedCardFactory';
 import {AppModel} from '../AppModel';
 import {CardComponent} from './card/CardComponent';
+import {AssetmanagementAppModelFactory} from '../AssetmanagementAppModelFactory';
 
 @Component({
     selector: 'feed',
@@ -15,11 +16,14 @@ export class FeedComponent implements OnInit {
     cards: DynamicCard[];
     @ViewChild(CardDirective) cardHost: CardDirective;
 
+    model: AppModel;
+
     constructor(private componentFactoryResolver: ComponentFactoryResolver) {
     }
 
     ngOnInit() {
         this.loadCards();
+        this.model = AssetmanagementAppModelFactory.create();
     }
 
     loadCards() {
@@ -29,7 +33,7 @@ export class FeedComponent implements OnInit {
             new ComplexesAnalyzedCardFactory(),
         ]);
 
-        this.cards = feedFactory.create(new AppModel());
+        this.cards = feedFactory.create(this.model);
 
         this.cards.forEach(card => {
             const componentFactory = this.componentFactoryResolver.resolveComponentFactory(card.component);

@@ -3,12 +3,26 @@ import {CardFactory} from '../../CardFactory';
 import {CardFactoryResponse} from '../../CardFactoryResponse';
 import {DynamicCard} from '../../DynamicCard';
 import {ComplexesAnalyzedComponent} from './complexes-analyzed.component';
+import {AppAuthorizationUtil} from '../../../../AppAuthorizationUtil';
 
 export class ComplexesAnalyzedCardFactory implements CardFactory<AppModel> {
     create(model: AppModel): CardFactoryResponse {
+        if (AppAuthorizationUtil.hasModule(model, 'AM')
+            && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
+            const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
+
+            return new CardFactoryResponse(
+                true,
+                new DynamicCard(ComplexesAnalyzedComponent,
+                    {
+                        analyzedComplexes: analyzedComplexes,
+                        totalComplexes: model.complexes.length
+                    }));
+        }
+
         return new CardFactoryResponse(
-            true,
-            new DynamicCard(ComplexesAnalyzedComponent, {analyzedComplexes: 20, totalComplexes: 100})
+            false,
+            null
         );
     }
 }
