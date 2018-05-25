@@ -10,12 +10,12 @@ export class AvmChartFeedFactory implements CardFactory<AppModel> {
         if (AppAuthorizationUtil.hasModule(model, 'AVM')
             && AppAuthorizationUtil.hasRole(model, 'Taxationmanager')) {
 
-            const cards = model.moduleData.ArrayChartDataSet.map(dataPoint => {
+            const cards = model.moduleData.map(entry => entry.ArrayChartDataSet.map(dataPoint => {
                 return new DynamicCard(
                     ArrayChartComponent,
                     dataPoint
                 );
-            });
+            })).reduce((left, right) => left.concat(right), []);
             return new CardFactoryResponse(cards);
         }
 

@@ -11,8 +11,7 @@ import {ProposeVariantCardFactory} from './card/assetmanagementcards/reminder/Pr
 import {ComplexSessionReminderCardFactory} from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
 import {AMThisQuarterModelFactory} from './card/assetmanagementcards/planning/AMThisQuarterModelFactory';
 import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFactory';
-import {AVMAppModelFactory} from '../AVMAppModelFactory';
-import {AvmChartFeedFactory} from './card/assetmanagementcards/graphcards/AvmChartFeedFactory';
+import {AvmChartFeedFactory} from './card/assetmanagementcards/graphcards/ChartFeedFactory';
 import {UpdatesCardFactory} from './card/assetmanagementcards/update/UpdatesCardFactory';
 
 @Component({

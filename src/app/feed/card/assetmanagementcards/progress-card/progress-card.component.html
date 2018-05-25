@@ -1,7 +1,7 @@
 <mat-card class="card-feed__card">
     <mat-card-header>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
-            <span>Analyse Complexes</span>
+            <span>{{data.title}}</span>
             <div>
                 <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                     <mat-icon>more_vert</mat-icon>
@@ -32,7 +32,7 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button mat-button class="mat-primary">View Unanalyzed Complexes</button>
-        <button mat-button class="mat-primary">Analyze C0016</button>
+        <button mat-button class="mat-primary">{{data.action1}}</button>
+        <button mat-button class="mat-primary">{{data.action2}}</button>
     </mat-card-actions>
 </mat-card>

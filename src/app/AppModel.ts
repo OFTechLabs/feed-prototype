@@ -2,34 +2,27 @@ export class AppModel {
     constructor(public user: User,
                 public modules: Module[],
                 public complexes: Complex[],
-                public moduleData: ModuleDataSet,
+                public moduleData: ModuleDataSet[],
                 public quarter: number,
-                public updates: Update[]
-                ) {
+                public updates: Update[]) {
     }
 }
 
 export class Module {
-    constructor(
-        public name: string
-    ) {
+    constructor(public name: string) {
     }
 }
 
 export class User {
-    constructor(
-        public fullName: string,
-        public username: string,
-        public roles: string[],
-    ) {
+    constructor(public fullName: string,
+                public username: string,
+                public roles: string[],) {
     }
 }
 
 export class Complex {
-    constructor(
-        public complexName: string,
-        public isAnalyzed: boolean,
-    ) {
+    constructor(public complexName: string,
+                public isAnalyzed: boolean,) {
     }
 }
 
@@ -42,9 +35,33 @@ export class ChartDataArray {
     }
 }
 
+export class ProgressData {
+    constructor(public title: string,
+                public action1: string,
+                public action2: string,
+                public explanation: string,
+                public progressValue: number,
+                public totalValue: number) {
+    }
+}
+
+export class NewsData {
+    constructor(public article: {
+                    title: string,
+                    date: string,
+                    teaser: string,
+                    imageUrl: string
+                },
+                public readmoreLink: string) {
+    }
+}
+
+
 export class ModuleDataSet {
     constructor(public moduleName: string,
-                public ArrayChartDataSet: ChartDataArray[]) {
+                public ArrayChartDataSet: ChartDataArray[],
+                public ProgressDataSet: ProgressData[],
+                public NewsDataSet: NewsData[]) {
     }
 }
 
