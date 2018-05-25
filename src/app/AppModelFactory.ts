@@ -1,4 +1,8 @@
-import {ChartDataArray, ModuleDataSet, NewsData, Planning, ProgressData} from './AppModel';
+import { ModuleDataSet } from './AppModel';
+import {ChartDataArray} from './feed/card/assetmanagementcards/graphcards/ChartArrayModel';
+import {ProgressData} from './feed/card/assetmanagementcards/progress-card/ProgressModel';
+import {NewsData} from './feed/card/assetmanagementcards/news-card/NewsModel';
+import {Planning} from './feed/card/assetmanagementcards/planning/PlanningModel';
 
 export class AppModelFactory {
 
@@ -36,7 +40,7 @@ export class AppModelFactory {
                 'polarArea', true)],
             [new ProgressData('AVM Valuation progress', 'View calculation process', 'Open AVM',
                 'AVM is still calculating, so far 112 out of 250 dwellings are valuated', 112, 250)],
-            [], []
+            [], [], []
         ),
             new ModuleDataSet(
                 'Ortec Finance',
@@ -47,7 +51,7 @@ export class AppModelFactory {
                         teaser: 'Conjunctuurcycli zijn een van de belangrijkste kenmerken (‘stylized facts’) die aangeven hoe assetprijzen, rentes, volatiliteiten en macro-economische variabelen zich in de realiteit gedragen.',
                         imageUrl: 'http://insights.ortec-finance.com/-/media/OF8/Insights/business-cycle-outlook-thumb.ashx?mh=450&la=nl-NL&h=321&w=450&mw=450&hash=65E2A11D2101B87B5E917FA1D3A560CBEBE90366'
                     },
-                    'http://insights.ortec-finance.com/nl-nl/2018/02/16/interactieve-conjunctuurgrafiek')], []
+                    'http://insights.ortec-finance.com/nl-nl/2018/02/16/interactieve-conjunctuurgrafiek')], [], []
             ),
             new ModuleDataSet(
                 'AM',
@@ -70,7 +74,7 @@ export class AppModelFactory {
                         'Start strategy for next year',
                     ], ['Year transition', 'Formulate strategy'], () => {
                     }
-                )]
+                )],[]
             )];
     }
 }

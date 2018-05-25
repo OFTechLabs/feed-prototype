@@ -1,3 +1,10 @@
+import {ReminderModel} from './feed/card/assetmanagementcards/reminder/ReminderModel';
+import {Planning} from './feed/card/assetmanagementcards/planning/PlanningModel';
+import {NewsData} from './feed/card/assetmanagementcards/news-card/NewsModel';
+import {ProgressData} from './feed/card/assetmanagementcards/progress-card/ProgressModel';
+import {ChartDataArray} from './feed/card/assetmanagementcards/graphcards/ChartArrayModel';
+
+
 export class AppModel {
     constructor(public user: User,
                 public modules: Module[],
@@ -26,52 +33,13 @@ export class Complex {
     }
 }
 
-export class ChartDataArray {
-    constructor(public title: string,
-                public ChartLabels: string[],
-                public ChartDataArray: { data: number[]; label: string }[],
-                public ChartType: string,
-                public ChartLegend: boolean) {
-    }
-}
-
-export class ProgressData {
-    constructor(public title: string,
-                public action1: string,
-                public action2: string,
-                public explanation: string,
-                public progressValue: number,
-                public totalValue: number) {
-    }
-}
-
-export class NewsData {
-    constructor(public article: {
-                    title: string,
-                    date: string,
-                    teaser: string,
-                    imageUrl: string
-                },
-                public readmoreLink: string) {
-    }
-}
-
-export class Planning {
-    constructor(public title: string,
-                public quarter: string,
-                public quarternumber: number,
-                public highlights: string [],
-                public actions: string [],
-                public dismiss: () => void) {
-        }
-}
-
 export class ModuleDataSet {
     constructor(public moduleName: string,
                 public ArrayChartDataSet: ChartDataArray[],
                 public ProgressDataSet: ProgressData[],
                 public NewsDataSet: NewsData[],
-                public PlanningSet: Planning[], ) {
+                public PlanningSet: Planning[],
+                public ReminderSer: ReminderModel[]) {
     }
 }
 
