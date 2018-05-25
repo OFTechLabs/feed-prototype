@@ -1,8 +1,8 @@
-import {WhatsNewComponent} from './whats-new.component';
-import {AppModel} from '../../../../AppModel';
 import {AppAuthorizationUtil} from '../../../../AppAuthorizationUtil';
 import {DynamicCard} from '../../DynamicCard';
 import {CardFactoryResponse} from '../../CardFactoryResponse';
+import {AppModel} from '../../../../AppModel';
+import {WhatsNewComponent} from './whats-new.component';
 
 export class WhatsNewAVMCardFactory {
 

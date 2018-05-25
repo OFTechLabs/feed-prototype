@@ -30,6 +30,7 @@ import { ThisQuarterComponent } from './feed/card/assetmanagementcards/planning/
 import { NewsCardComponent } from './feed/card/assetmanagementcards/news-card/news-card.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import {UpdateComponent} from './feed/card/assetmanagementcards/update/update.component';
+import {WarningComponent} from './feed/card/assetmanagementcards/warnings/warning.component';
 
 const MATERIAL_MODULES = [
     MatToolbarModule,
@@ -57,6 +58,7 @@ const MATERIAL_MODULES = [
         ThisQuarterComponent,
         ProfileComponent,
         UpdateComponent,
+        WarningComponent,
     ],
     entryComponents: [
         WhatsNewComponent,
@@ -67,6 +69,7 @@ const MATERIAL_MODULES = [
         NewsCardComponent,
         ThisQuarterComponent,
         UpdateComponent,
+        WarningComponent,
     ],
     imports: [
         BrowserModule,

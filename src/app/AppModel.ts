@@ -13,7 +13,8 @@ export class AppModel {
                 public complexes: Complex[],
                 public moduleData: ModuleDataSet[],
                 public quarter: number,
-                public updates: Update[]) {
+                public updates: Update[],
+                public warnings: Warning[]) {
     }
 }
 
@@ -51,6 +52,17 @@ export class Update {
     constructor(
         public title: string,
         public description: string,
+        public roles: string[],
+        public module: string
+    ) {
+    }
+}
+
+export class Warning {
+    constructor(
+        public title: string,
+        public description: string,
+        public actions: string[],
         public roles: string[],
         public module: string
     ) {

@@ -1,8 +1,8 @@
-<mat-card class="card-feed__card">
+<mat-card class="card-feed__card warning">
     <mat-card-header>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
-            <div class="card-feed__card__header--title" fxLayout="row" fxLayoutAlign="start center">
-                <mat-icon class="mat-primary">assessment</mat-icon>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-warn">warning</mat-icon>
                 <span>{{data.title}}</span>
             </div>
             <div>
@@ -19,14 +19,10 @@
     </mat-card-header>
 
     <mat-card-content>
-        <div style="display: block">
-            <canvas baseChart
-                    [datasets]="data.ChartDataArray"
-                    [labels]="data.ChartLabels"
-                    [legend]="data.ChartLegend"
-                    [chartType]="data.ChartType"
-                    (chartHover)="chartHovered($event)"
-                    (chartClick)="chartClicked($event)"></canvas>
-        </div>
+        <p>{{data.description}}</p>
     </mat-card-content>
+
+    <mat-card-actions>
+        <button class="mat-primary" mat-button *ngFor="let action of data.actions">{{action}}</button>
+    </mat-card-actions>
 </mat-card>

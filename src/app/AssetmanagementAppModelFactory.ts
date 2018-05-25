@@ -1,4 +1,4 @@
-import {AppModel, Complex, Module, Update, User} from './AppModel';
+import {AppModel, Complex, Module, Update, User, Warning} from './AppModel';
 
 export class AssetmanagementAppModelFactory {
 
@@ -21,7 +21,24 @@ export class AssetmanagementAppModelFactory {
                     ['Assetmanager'],
                     'AM'
                 ),
-            ]
+            ],
+            [
+                new Warning(
+                    'Invalid real estate data',
+                    'Some of the datasets contain invalid data, please try and resolve all errors.',
+                    ['Go to invalid datasets'],
+                    ['Taxationmanager'],
+                    'AVM'
+                ),
+                new Warning(
+                    'Calculation failed',
+                    'A calculation has failed, the service desk has already been notified, ' +
+                    'we will get in touch when the issue has been resolved.',
+                    [],
+                    ['Assetmanager'],
+                    'AM'
+                ),
+            ],
         );
     }
 

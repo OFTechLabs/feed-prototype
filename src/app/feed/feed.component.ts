@@ -14,6 +14,7 @@ import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFac
 import {AvmChartFeedFactory} from './card/assetmanagementcards/graphcards/ChartFeedFactory';
 import {UpdatesCardFactory} from './card/assetmanagementcards/update/UpdatesCardFactory';
 import {ComplexesAnalyzedCardFactory} from './card/assetmanagementcards/complexesanalyzedcard/ComplexesAnalyzedCardFactory';
+import {WarningCardsFactory} from './card/assetmanagementcards/warnings/WarningCardsFactory';
 
 @Component({
     selector: 'feed',
@@ -56,6 +57,7 @@ export class FeedComponent implements OnInit {
             new NewsCardFactory(),
             new UpdatesCardFactory(),
             new AvmChartFeedFactory(),
+            new WarningCardsFactory(),
         ]);
 
         this.cards = feedFactory.create(this._model);
