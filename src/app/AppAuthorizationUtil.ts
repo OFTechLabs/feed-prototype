@@ -13,4 +13,10 @@ export class AppAuthorizationUtil {
             .filter(role => role === shouldHaveRole)
             .length > 0;
     }
+
+    public static hasRoles(model: AppModel, shouldHaveRole: string[]) {
+        return model.user.roles
+            .filter(role => shouldHaveRole.filter(shouldHave => shouldHave === role).length > 0)
+            .length > 0;
+    }
 }

@@ -29,6 +29,7 @@ import {ReminderComponent} from './feed/card/assetmanagementcards/reminder/remin
 import {ArrayChartComponent} from './feed/card/assetmanagementcards/graphcards/arraycharts/arraychart.component';
 import {ThisQuarterComponent} from './feed/card/assetmanagementcards/planning/this-quarter.component';
 import {NewsCardComponent} from './feed/card/assetmanagementcards/news-card/news-card.component';
+import {UpdateComponent} from './feed/card/assetmanagementcards/update/update.component';
 
 const MATERIAL_MODULES = [
     MatToolbarModule,
@@ -54,7 +55,8 @@ const MATERIAL_MODULES = [
         ReminderComponent,
         NewsCardComponent,
         ArrayChartComponent,
-        ThisQuarterComponent
+        ThisQuarterComponent,
+        UpdateComponent,
     ],
     entryComponents: [
         ComplexesAnalyzedComponent,
@@ -65,6 +67,7 @@ const MATERIAL_MODULES = [
         ReminderComponent,
         NewsCardComponent,
         ThisQuarterComponent,
+        UpdateComponent,
     ],
     imports: [
         BrowserModule,

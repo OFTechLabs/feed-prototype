@@ -4,6 +4,7 @@ export class AppModel {
                 public complexes: Complex[],
                 public moduleData: ModuleDataSet,
                 public quarter: number,
+                public updates: Update[]
                 ) {
     }
 }
@@ -44,5 +45,15 @@ export class ChartDataArray {
 export class ModuleDataSet {
     constructor(public moduleName: string,
                 public ArrayChartDataSet: ChartDataArray[]) {
+    }
+}
+
+export class Update {
+    constructor(
+        public title: string,
+        public description: string,
+        public roles: string[],
+        public module: string
+    ) {
     }
 }

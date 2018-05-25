@@ -13,6 +13,7 @@ import {AMThisQuarterModelFactory} from './card/assetmanagementcards/planning/AM
 import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFactory';
 import {AVMAppModelFactory} from '../AVMAppModelFactory';
 import {AvmChartFeedFactory} from './card/assetmanagementcards/graphcards/AvmChartFeedFactory';
+import {UpdatesCardFactory} from './card/assetmanagementcards/update/UpdatesCardFactory';
 
 @Component({
     selector: 'feed',
@@ -52,6 +53,7 @@ export class FeedComponent implements OnInit {
             new WhatsNewAMCardFactory(),
             new WhatsNewAVMCardFactory(),
             new NewsCardFactory(),
+            new UpdatesCardFactory(),
             new AvmChartFeedFactory(),
         ]);
 

@@ -1,4 +1,4 @@
-import {AppModel, Complex, Module, User} from './AppModel';
+import {AppModel, Complex, Module, Update, User} from './AppModel';
 
 export class AssetmanagementAppModelFactory {
 
@@ -6,7 +6,22 @@ export class AssetmanagementAppModelFactory {
         return new AppModel(
             new User('Mark Rutte', 'markr', ['Assetmanager', 'Taxationmanager']),
             [new Module('AM'), new Module('AVM'), new Module('TMS'), new Module('VGR')],
-            AssetmanagementAppModelFactory.createComplexes(231), null,2
+            AssetmanagementAppModelFactory.createComplexes(231), null,
+            2,
+            [
+                new Update(
+                    'Updated property valuations',
+                    'Valuations for your properties in your subportfolio have been updated',
+                    ['Assetmanager', 'Taxationmanager'],
+                    'AVM'
+                ),
+                new Update(
+                    'Proposal Accepted',
+                    'A proposal has been accepted by the portfoliomanager.',
+                    ['Assetmanager'],
+                    'AM'
+                ),
+            ]
         );
     }
 
