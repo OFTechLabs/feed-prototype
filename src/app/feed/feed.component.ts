@@ -17,6 +17,7 @@ import {DoughnutChartCardFactory} from './card/assetmanagementcards/graphcards/d
 import {RadarChartCardFactory} from './card/assetmanagementcards/graphcards/radarchart/RadarChartCardFactory';
 import {PolarChartComponent} from './card/assetmanagementcards/graphcards/polarchart/polarchart.component';
 import {PolarChartCardFactory} from './card/assetmanagementcards/graphcards/polarchart/PolarChartCardFactory';
+import {ComplexSessionReminderCardFactory} from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
 
 @Component({
     selector: 'feed',
@@ -39,6 +40,7 @@ export class FeedComponent implements OnInit {
 
     loadCards() {
         const feedFactory = new FeedFactory<AppModel>([
+            new ComplexSessionReminderCardFactory(),
             new ProposeVariantCardFactory(),
             new ProgressCardFactory(),
             new WhatsNewAMCardFactory(),

@@ -2,7 +2,10 @@
     <mat-card-header>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxFlexFill>
             <span>{{data.title}}</span>
-            <div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <span class="due_days">
+                    Due in {{data.daysLeft}} days
+                </span>
                 <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                     <mat-icon>more_vert</mat-icon>
                 </button>
@@ -17,8 +20,6 @@
 
     <mat-card-content>
         <p>{{data.description}}</p>
-
-        Due in <span style="color: red">{{data.daysLeft}}</span> days
     </mat-card-content>
 
     <mat-card-actions>
