@@ -3,6 +3,8 @@ import {Planning} from './feed/card/assetmanagementcards/planning/PlanningModel'
 import {NewsData} from './feed/card/assetmanagementcards/news-card/NewsModel';
 import {ProgressData} from './feed/card/assetmanagementcards/progress-card/ProgressModel';
 import {ChartDataArray} from './feed/card/assetmanagementcards/graphcards/ChartArrayModel';
+import {UpdatesModel} from './feed/card/assetmanagementcards/update/UpdatesModel';
+import {WhatsNewModel} from './feed/card/assetmanagementcards/whatsnew/WhatsNewModel';
 
 
 export class AppModel {
@@ -39,7 +41,9 @@ export class ModuleDataSet {
                 public ProgressDataSet: ProgressData[],
                 public NewsDataSet: NewsData[],
                 public PlanningSet: Planning[],
-                public ReminderSer: ReminderModel[]) {
+                public ReminderSer: ReminderModel[],
+                public UpdatesSet: UpdatesModel[],
+                public WatsNewSet: WhatsNewModel[]) {
     }
 }
 
