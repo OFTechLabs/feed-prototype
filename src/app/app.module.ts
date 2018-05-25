@@ -31,7 +31,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     entryComponents: [ComplexesAnalyzedComponent],
     imports: [
         BrowserModule,
-        ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+        ServiceWorkerModule.register(environment.serviceWorkerLocation, {enabled: environment.production}),
         BrowserAnimationsModule,
         LayoutModule,
         MatToolbarModule,
