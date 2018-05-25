@@ -4,11 +4,9 @@ export class AssetmanagementAppModelFactory {
 
     public static create(): AppModel {
         return new AppModel(
-            new User('Mark Rutte', 'markr', ['Assetmanager']),
+            new User('Mark Rutte', 'markr', ['Assetmanager', 'Taxationmanager']),
             [new Module('AM'), new Module('AVM'), new Module('TMS'), new Module('VGR')],
-            AssetmanagementAppModelFactory.createComplexes(231),
-            [],
-            2
+            AssetmanagementAppModelFactory.createComplexes(231), null,2
         );
     }
 

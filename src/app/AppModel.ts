@@ -1,11 +1,9 @@
 export class AppModel {
-    constructor(
-        public user: User,
-        public modules: Module[],
-        public complexes: Complex[],
-        public avmData: AvmDataSet[],
-        public quarter: number,
-    ) {
+    constructor(public user: User,
+                public modules: Module[],
+                public complexes: Complex[],
+                public moduleData: ModuleDataSet,
+                public quarter: number,) {
     }
 }
 
@@ -33,13 +31,17 @@ export class Complex {
     }
 }
 
-export class AvmDataSet {
-
-    constructor(
-        public title: string,
-        public ChartLabels: string[],
-        public ChartData: { data: number[]; label: string }[],
-        public ChartType: string) {
+export class ChartDataArray {
+    constructor(public title: string,
+                public ChartLabels: string[],
+                public ChartDataArray: { data: number[]; label: string }[],
+                public ChartType: string,
+                public ChartLegend: boolean) {
     }
+}
 
+export class ModuleDataSet {
+    constructor(public moduleName: string,
+                public ArrayChartDataSet: ChartDataArray[]) {
+    }
 }

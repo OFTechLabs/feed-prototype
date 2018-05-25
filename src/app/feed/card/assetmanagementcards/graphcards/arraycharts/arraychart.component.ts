@@ -2,17 +2,17 @@ import {Component, Input} from '@angular/core';
 import {CardComponent} from '../../../CardComponent';
 
 @Component({
-    templateUrl: './doughnutchart.component.html',
+    templateUrl: './arraychart.component.html',
 })
 
-export class DoughnutChartComponent implements CardComponent {
+export class ArrayChartComponent implements CardComponent {
 
     @Input() data: {
         title: string,
-        ChartLabels: string[],
+        ChartLabels: any[],
         ChartData: any[],
         ChartType: string,
-        ChartOptions: any,
+        ChartLegend: boolean,
         dismiss: () => {},
     };
 
