@@ -56,12 +56,22 @@ export class NewsData {
     }
 }
 
+export class Planning {
+    constructor(public title: string,
+                public quarter: string,
+                public quarternumber: number,
+                public highlights: string [],
+                public actions: string [],
+                public dismiss: () => void) {
+        }
+}
 
 export class ModuleDataSet {
     constructor(public moduleName: string,
                 public ArrayChartDataSet: ChartDataArray[],
                 public ProgressDataSet: ProgressData[],
-                public NewsDataSet: NewsData[]) {
+                public NewsDataSet: NewsData[],
+                public PlanningSet: Planning[], ) {
     }
 }
 

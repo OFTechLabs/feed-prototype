@@ -1,4 +1,4 @@
-import { ChartDataArray, ModuleDataSet, NewsData, ProgressData } from './AppModel';
+import {ChartDataArray, ModuleDataSet, NewsData, Planning, ProgressData} from './AppModel';
 
 export class AppModelFactory {
 
@@ -36,7 +36,7 @@ export class AppModelFactory {
                 'polarArea', true)],
             [new ProgressData('AVM Valuation progress', 'View calculation process', 'Open AVM',
                 'AVM is still calculating, so far 112 out of 250 dwellings are valuated', 112, 250)],
-            []
+            [], []
         ),
             new ModuleDataSet(
                 'Ortec Finance',
@@ -47,7 +47,30 @@ export class AppModelFactory {
                         teaser: 'Conjunctuurcycli zijn een van de belangrijkste kenmerken (‘stylized facts’) die aangeven hoe assetprijzen, rentes, volatiliteiten en macro-economische variabelen zich in de realiteit gedragen.',
                         imageUrl: 'http://insights.ortec-finance.com/-/media/OF8/Insights/business-cycle-outlook-thumb.ashx?mh=450&la=nl-NL&h=321&w=450&mw=450&hash=65E2A11D2101B87B5E917FA1D3A560CBEBE90366'
                     },
-                    'http://insights.ortec-finance.com/nl-nl/2018/02/16/interactieve-conjunctuurgrafiek')]
+                    'http://insights.ortec-finance.com/nl-nl/2018/02/16/interactieve-conjunctuurgrafiek')], []
+            ),
+            new ModuleDataSet(
+                'AM',
+                [],
+                [],
+                [],
+                [new Planning('Quarterly Tasks', 'Q1', 1, [
+                    'Finalize the year-transition so we can combine the past policy with the current properties.',
+                    'Start analyzing the goals & properties.',
+                ], ['Year transition', 'Goals', 'Analyze'],
+                    () => {
+                     }
+                ), new Planning('Quarterly Tasks', 'Q2', 2, [
+                        'Finalize all your policy, make sure all properties have the correct policy.',
+                        'Make a proposal for your subportfolio.'
+                    ], ['Properties missing policy', 'Make a proposal'], () => {
+                    }
+                ), new Planning('Quarterly Tasks', 'Q4', 4, [
+                        'Start the year transition',
+                        'Start strategy for next year',
+                    ], ['Year transition', 'Formulate strategy'], () => {
+                    }
+                )]
             )];
     }
 }
