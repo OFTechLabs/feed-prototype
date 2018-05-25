@@ -3,6 +3,7 @@ export class AppModel {
         public user: User,
         public modules: Module[],
         public complexes: Complex[],
+        public avmData: AvmDataSet[]
     ) {
     }
 }
@@ -29,4 +30,15 @@ export class Complex {
         public isAnalyzed: boolean,
     ) {
     }
+}
+
+export class AvmDataSet {
+
+    constructor(
+        public title: string,
+        public ChartLabels: string[],
+        public ChartData: { data: number[]; label: string }[],
+        public ChartType: string) {
+    }
+
 }

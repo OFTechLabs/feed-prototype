@@ -6,7 +6,8 @@ export class AssetmanagementAppModelFactory {
         return new AppModel(
             new User('Mark Rutte', 'markr', ['Assetmanager']),
             [new Module('AM'), new Module('AVM'), new Module('TMS'), new Module('VGR')],
-            AssetmanagementAppModelFactory.createComplexes(231)
+            AssetmanagementAppModelFactory.createComplexes(231),
+            []
         );
     }
 
