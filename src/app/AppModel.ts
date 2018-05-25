@@ -3,7 +3,8 @@ export class AppModel {
                 public modules: Module[],
                 public complexes: Complex[],
                 public moduleData: ModuleDataSet,
-                public quarter: number,) {
+                public quarter: number,
+                ) {
     }
 }
 

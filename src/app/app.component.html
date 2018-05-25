@@ -16,6 +16,15 @@
                 <mat-icon>rss_feed</mat-icon>
                 <span matBadge="7" matBadgeOverlap="false" matBadgeColor="warn">Feed</span>
             </a>
+            <a mat-list-item (click)="amAssetmanager()">
+                <span>AM</span>
+            </a>
+            <a mat-list-item (click)="avmTaxationManager()">
+                <span>AVM</span>
+            </a>
+            <a mat-list-item (click)="allRoles()">
+                <span>ALL</span>
+            </a>
         </mat-nav-list>
     </mat-sidenav>
 
@@ -34,7 +43,7 @@
 
         <div class="main-section">
             <div class="main-wrapper">
-                <feed></feed>
+                <feed [model]="model"></feed>
             </div>
         </div>
     </mat-sidenav-content>
