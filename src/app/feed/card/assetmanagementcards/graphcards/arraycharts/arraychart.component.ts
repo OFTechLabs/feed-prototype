@@ -13,6 +13,7 @@ export class ArrayChartComponent implements CardComponent {
         ChartData: any[],
         ChartType: string,
         ChartLegend: boolean,
+        ChartDataArray: any[];
         dismiss: () => {},
     };
 
