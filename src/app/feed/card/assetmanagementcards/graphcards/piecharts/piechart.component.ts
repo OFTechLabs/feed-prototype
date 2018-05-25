@@ -11,7 +11,8 @@ export class PieChartComponent implements CardComponent {
         title: string,
         pieChartLabels: string[],
         pieChartData: number[],
-        pieChartType: string
+        pieChartType: string,
+        dismiss: () => {},
     };
 
     // events

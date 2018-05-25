@@ -11,7 +11,8 @@ export class RadarChartComponent implements CardComponent {
         title: string,
         ChartLabels: string[],
         ChartData: any[],
-        ChartType: string
+        ChartType: string,
+        dismiss: () => {},
     };
 
     // events

@@ -14,7 +14,8 @@ export class LineChartComponent implements CardComponent {
         lineChartOptions: any,
         lineChartColors: Array<any>,
         lineChartLegend: boolean,
-        lineChartType: string
+        lineChartType: string,
+        dismiss: () => {},
     };
 
     // events

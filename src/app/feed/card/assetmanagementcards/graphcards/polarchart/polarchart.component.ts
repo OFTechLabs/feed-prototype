@@ -12,7 +12,8 @@ export class PolarChartComponent implements CardComponent {
         ChartLabels: string[],
         ChartData: any[],
         Legend: boolean,
-        ChartType: string
+        ChartType: string,
+        dismiss: () => {},
     };
 
     // events

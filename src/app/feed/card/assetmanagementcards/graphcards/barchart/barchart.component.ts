@@ -14,6 +14,7 @@ export class BarChartComponent implements CardComponent {
         barChartType: string,
         barChartLegend: boolean,
         barChartOptions: any,
+        dismiss: () => {},
     };
 
     // events

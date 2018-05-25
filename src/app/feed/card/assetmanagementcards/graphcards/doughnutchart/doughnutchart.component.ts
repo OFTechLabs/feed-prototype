@@ -13,6 +13,7 @@ export class DoughnutChartComponent implements CardComponent {
         ChartData: any[],
         ChartType: string,
         ChartOptions: any,
+        dismiss: () => {},
     };
 
     // events
