@@ -6,6 +6,8 @@ import {ComplexesAnalyzedCardFactory} from './card/assetmanagementcards/complexe
 import {AppModel} from '../AppModel';
 import {CardComponent} from './card/CardComponent';
 import {AssetmanagementAppModelFactory} from '../AssetmanagementAppModelFactory';
+import {WhatsNewAMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
+import {WhatsNewAVMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAVMCardFactory';
 import { ProgressCardFactory } from './card/assetmanagementcards/progress-card/ProgressCardFactory';
 
 @Component({
@@ -30,7 +32,9 @@ export class FeedComponent implements OnInit {
     loadCards() {
         const feedFactory = new FeedFactory<AppModel>([
             new ComplexesAnalyzedCardFactory(),
-            new ProgressCardFactory()
+            new ProgressCardFactory(),
+            new WhatsNewAMCardFactory(),
+            new WhatsNewAVMCardFactory(),
         ]);
 
         this.cards = feedFactory.create(this.model);

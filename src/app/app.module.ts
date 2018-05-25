@@ -21,6 +21,7 @@ import { FeedComponent } from './feed/feed.component';
 import { CardDirective } from './feed/card/card.directive';
 import { ComplexesAnalyzedComponent } from './feed/card/assetmanagementcards/complexesanalyzedcard/complexes-analyzed.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {WhatsNewComponent} from './feed/card/assetmanagementcards/whatsnew/whats-new.component';
 import { ProgressCardComponent } from './feed/card/assetmanagementcards/progress-card/progress-card.component';
 
 @NgModule({
@@ -29,9 +30,14 @@ import { ProgressCardComponent } from './feed/card/assetmanagementcards/progress
         FeedComponent,
         CardDirective,
         ComplexesAnalyzedComponent,
+        WhatsNewComponent,
         ProgressCardComponent
     ],
-    entryComponents: [ComplexesAnalyzedComponent, ProgressCardComponent],
+    entryComponents: [
+        ComplexesAnalyzedComponent,
+        WhatsNewComponent,
+        ProgressCardComponent
+    ],
     imports: [
         BrowserModule,
         ServiceWorkerModule.register(environment.serviceWorkerLocation, {enabled: environment.production}),
