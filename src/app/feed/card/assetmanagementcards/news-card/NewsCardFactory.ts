@@ -13,6 +13,7 @@ export class NewsCardFactory implements CardFactory<AppModel> {
             const cards = model.moduleData.map(entry => entry.NewsDataSet.map(dataPoint => {
                 return new DynamicCard(
                     NewsCardComponent,
+                    Math.round(Math.random() * 100),
                     dataPoint
                 );
             })).reduce((left, right) => left.concat(right), []);

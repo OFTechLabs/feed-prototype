@@ -13,6 +13,7 @@ export class AvmChartFeedFactory implements CardFactory<AppModel> {
             const cards = model.moduleData.map(entry => entry.ArrayChartDataSet.map(dataPoint => {
                 return new DynamicCard(
                     ArrayChartComponent,
+                    Math.round(Math.random() * 100),
                     dataPoint
                 );
             })).reduce((left, right) => left.concat(right), []);

@@ -11,7 +11,9 @@ export class AMThisQuarterModelFactory {
 
             if (model.quarter === 1) {
                 return new CardFactoryResponse(
-                    [new DynamicCard(ThisQuarterComponent,
+                    [new DynamicCard(
+                        ThisQuarterComponent,
+                        Math.round(Math.random() * 100),
                         {
                             title: 'Quarterly Tasks',
                             quarter: 'Q1',
@@ -26,7 +28,9 @@ export class AMThisQuarterModelFactory {
             }
             if (model.quarter === 2) {
                 return new CardFactoryResponse(
-                    [new DynamicCard(ThisQuarterComponent,
+                    [new DynamicCard(
+                        ThisQuarterComponent,
+                        Math.round(Math.random() * 100),
                         {
                             title: 'Quarterly Tasks',
                             quarter: 'Q2',
@@ -41,7 +45,9 @@ export class AMThisQuarterModelFactory {
             }
             if (model.quarter === 4) {
                 return new CardFactoryResponse(
-                    [new DynamicCard(ThisQuarterComponent,
+                    [new DynamicCard(
+                        ThisQuarterComponent,
+                        Math.round(Math.random() * 100),
                         {
                             title: 'Quarterly Tasks',
                             quarter: 'Q4',

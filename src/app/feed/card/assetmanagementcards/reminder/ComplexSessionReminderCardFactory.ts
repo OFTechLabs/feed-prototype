@@ -12,6 +12,7 @@ export class ComplexSessionReminderCardFactory implements CardFactory<AppModel> 
             && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
             return new CardFactoryResponse(
                 [new DynamicCard(ReminderComponent,
+                    Math.round(Math.random() * 100),
                     {
                         title: 'Complex Session ' + model.complexes[12].complexName,
                         description: 'Complex ' + model.complexes[12].complexName + ' has a complex session coming up. Make sure all preparations are done.',

@@ -13,6 +13,7 @@ export class ProgressCardFactory implements CardFactory<AppModel> {
             const cards = model.moduleData.map(entry => entry.ProgressDataSet.map(dataPoint => {
                 return new DynamicCard(
                     ProgressCardComponent,
+                    Math.round(Math.random() * 100),
                     dataPoint
                 );
             })).reduce((left, right) => left.concat(right), []);

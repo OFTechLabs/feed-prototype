@@ -11,7 +11,9 @@ export class WhatsNewAVMCardFactory {
             && AppAuthorizationUtil.hasRole(model, 'Taxationmanager')) {
 
             return new CardFactoryResponse(
-                [new DynamicCard(WhatsNewComponent,
+                [new DynamicCard(
+                    WhatsNewComponent,
+                    Math.round(Math.random() * 100),
                     {
                         title: 'AVM 2018.9',
                         description: 'New version of AVM is available! The new features can be seen in the demo below. AVM now has a dashboard with the most relevant information about your properties.',

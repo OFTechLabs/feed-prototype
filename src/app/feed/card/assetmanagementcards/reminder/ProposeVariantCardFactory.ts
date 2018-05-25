@@ -10,7 +10,9 @@ export class ProposeVariantCardFactory implements CardFactory<AppModel> {
         if (AppAuthorizationUtil.hasModule(model, 'AM')
             && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
             return new CardFactoryResponse(
-                [new DynamicCard(ReminderComponent,
+                [new DynamicCard(
+                    ReminderComponent,
+                    Math.round(Math.random() * 100),
                     {
                         title: 'Policy Proposal',
                         description: 'A proposed variant is required to finalize the policy for this year',

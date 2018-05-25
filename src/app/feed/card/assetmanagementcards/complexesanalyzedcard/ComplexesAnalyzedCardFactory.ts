@@ -12,7 +12,9 @@ export class ComplexesAnalyzedCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             return new CardFactoryResponse(
-                [new DynamicCard(ComplexesAnalyzedComponent,
+                [new DynamicCard(
+                    ComplexesAnalyzedComponent,
+                    Math.round(Math.random() * 100),
                     {
                         analyzedComplexes: analyzedComplexes,
                         totalComplexes: model.complexes.length

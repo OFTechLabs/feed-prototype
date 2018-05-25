@@ -14,6 +14,7 @@ export class UpdatesCardFactory implements CardFactory<AppModel> {
                 && AppAuthorizationUtil.hasRoles(model, update.roles)) {
                 cards.push(new DynamicCard(
                     UpdateComponent,
+                    Math.round(Math.random() * 100),
                     {
                         title: update.title,
                         update: update.description,
