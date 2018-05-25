@@ -12,10 +12,8 @@ export class ProgressCardFactory implements CardFactory<AppModel> {
             const analyzedComplexes = model.complexes.filter(complex => complex.isAnalyzed).length;
 
             const description =
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' +
-                ' Quisque tempus tincidunt est sed placerat. ' +
-                ' In vehicula, sem in pulvinar gravida, ipsum tellus vestibulum metus, nec ornare purus turpis et libero. ' +
-                'Ut commodo neque urna, in malesuada libero tristique nec. ';
+                'For assetmanagement it is preferably if all complexes are analyzed, so far ' + analyzedComplexes + ' out of '
+            + model.complexes.length + ' are analyzed. ';
 
             return new CardFactoryResponse(
                 [new DynamicCard(ProgressCardComponent,
