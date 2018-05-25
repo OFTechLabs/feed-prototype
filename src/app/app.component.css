@@ -1,0 +1,23 @@
+mat-sidenav {
+    width: 200px;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+}
+
+mat-sidenav-container {
+    height: 100%;
+    width: 100%;
+}
+
+mat-sidenav-container .mat-drawer-content {
+    overflow: hidden;
+}
+
+.main-section {
+    overflow: auto;
+}
+
+.main-wrapper {
+    margin: auto;
+    padding: 0 32px;
+    max-width: 1200px;
+}

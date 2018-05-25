@@ -1,0 +1,11 @@
+.card-feed {
+    margin: 16px 0 0 0;
+}
+
+/deep/ .card-feed__card {
+    margin-bottom: 16px;
+}
+
+/deep/ .card-feed__card .mat-card-header-text {
+    margin: 0;
+}
