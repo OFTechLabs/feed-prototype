@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AppModel } from '../../AppModel';
-import { AVMAppModelFactory } from '../../AVMAppModelFactory';
+import { AppModelFactory } from '../../AppModelFactory';
 import { AssetmanagementAppModelFactory } from '../../AssetmanagementAppModelFactory';
 
 @Component({
@@ -36,7 +36,7 @@ export class ProfileComponent implements OnInit {
 
     private adjustToRoles(roleNames: string[]) {
         this.model = AssetmanagementAppModelFactory.create();
-        this.model.moduleData = AVMAppModelFactory.create();
+        this.model.moduleData = AppModelFactory.create();
         this.model.user.roles = roleNames;
         this.modelChange.emit(this.model);
     }

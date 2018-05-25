@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {map} from 'rxjs/operators';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {Observable} from 'rxjs';
-import {AssetmanagementAppModelFactory} from './AssetmanagementAppModelFactory';
-import {AppModel} from './AppModel';
-import {AVMAppModelFactory} from './AVMAppModelFactory';
+import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { AssetmanagementAppModelFactory } from './AssetmanagementAppModelFactory';
+import { AppModel } from './AppModel';
+import { AppModelFactory } from './AppModelFactory';
 
 @Component({
     selector: 'app-root',
@@ -23,6 +23,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         this.model = AssetmanagementAppModelFactory.create();
-        this.model.moduleData = AVMAppModelFactory.create();
+        this.model.moduleData = AppModelFactory.create();
     }
 }
