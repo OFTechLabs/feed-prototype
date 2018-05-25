@@ -9,3 +9,7 @@
 /deep/ .card-feed__card .mat-card-header-text {
     margin: 0;
 }
+
+/deep/ .card-feed__card .mat-card-header {
+    margin-bottom: 16px;
+}
