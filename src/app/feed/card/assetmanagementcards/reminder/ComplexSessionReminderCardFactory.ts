@@ -12,7 +12,7 @@ export class ComplexSessionReminderCardFactory {
             return new CardFactoryResponse(
                 [new DynamicCard(ReminderComponent,
                     {
-                        title: 'Complex Session' + model.complexes[12].complexName,
+                        title: 'Complex Session ' + model.complexes[12].complexName,
                         description: 'Complex ' + model.complexes[12].complexName + ' has a complex session coming up. Make sure all preparations are done.',
                         daysLeft: 3,
                         actions: ['Go to ' + model.complexes[12].complexName],
