@@ -20,7 +20,6 @@ import {
 } from '@angular/material';
 import { FeedComponent } from './feed/feed.component';
 import { CardDirective } from './feed/card/card.directive';
-import { ComplexesAnalyzedComponent } from './feed/card/assetmanagementcards/complexesanalyzedcard/complexes-analyzed.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { WhatsNewComponent } from './feed/card/assetmanagementcards/whatsnew/whats-new.component';
 import { ProgressCardComponent } from './feed/card/assetmanagementcards/progress-card/progress-card.component';
@@ -50,7 +49,6 @@ const MATERIAL_MODULES = [
         AppComponent,
         FeedComponent,
         CardDirective,
-        ComplexesAnalyzedComponent,
         WhatsNewComponent,
         ProgressCardComponent,
         ReminderComponent,
@@ -61,7 +59,6 @@ const MATERIAL_MODULES = [
         UpdateComponent,
     ],
     entryComponents: [
-        ComplexesAnalyzedComponent,
         WhatsNewComponent,
         ProgressCardComponent,
         ReminderComponent,

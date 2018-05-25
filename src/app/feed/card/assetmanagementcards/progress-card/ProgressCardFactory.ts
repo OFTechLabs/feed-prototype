@@ -7,8 +7,8 @@ import {ProgressCardComponent} from './progress-card.component';
 
 export class ProgressCardFactory implements CardFactory<AppModel> {
     create(model: AppModel): CardFactoryResponse {
-        if (AppAuthorizationUtil.hasModule(model, 'AM')
-            && AppAuthorizationUtil.hasRole(model, 'Assetmanager')) {
+        if (AppAuthorizationUtil.hasModule(model, 'AVM')
+            && AppAuthorizationUtil.hasRole(model, 'Taxationmanager')) {
 
             const cards = model.moduleData.map(entry => entry.ProgressDataSet.map(dataPoint => {
                 return new DynamicCard(
@@ -19,5 +19,7 @@ export class ProgressCardFactory implements CardFactory<AppModel> {
             })).reduce((left, right) => left.concat(right), []);
             return new CardFactoryResponse(cards);
         }
+
+        return new CardFactoryResponse([]);
     }
 }

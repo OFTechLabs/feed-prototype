@@ -2,8 +2,8 @@ import {AppModel} from '../../../../AppModel';
 import {CardFactory} from '../../CardFactory';
 import {CardFactoryResponse} from '../../CardFactoryResponse';
 import {DynamicCard} from '../../DynamicCard';
-import {ComplexesAnalyzedComponent} from './complexes-analyzed.component';
 import {AppAuthorizationUtil} from '../../../../AppAuthorizationUtil';
+import {ProgressCardComponent} from '../progress-card/progress-card.component';
 
 export class ComplexesAnalyzedCardFactory implements CardFactory<AppModel> {
     create(model: AppModel): CardFactoryResponse {
@@ -13,11 +13,15 @@ export class ComplexesAnalyzedCardFactory implements CardFactory<AppModel> {
 
             return new CardFactoryResponse(
                 [new DynamicCard(
-                    ComplexesAnalyzedComponent,
-                    Math.round(Math.random() * 100),
+                    ProgressCardComponent,
+                    1,
                     {
-                        analyzedComplexes: analyzedComplexes,
-                        totalComplexes: model.complexes.length
+                        title: 'Complexes Analyzed',
+                        explanation: 'Try and analyze all complexes every year.',
+                        progressValue: analyzedComplexes,
+                        totalValue: model.complexes.length,
+                        action1: 'View Unanalyzed Complexes',
+                        action2: 'View C0025',
                     })]);
         }
 

@@ -4,7 +4,7 @@ export class AssetmanagementAppModelFactory {
 
     public static create(): AppModel {
         return new AppModel(
-            new User('Mark Rutte', 'markr', ['Assetmanager', 'Taxationmanager']),
+            new User('Mark Rutte', 'markr', ['Assetmanager']),
             [new Module('AM'), new Module('AVM'), new Module('TMS'), new Module('VGR')],
             AssetmanagementAppModelFactory.createComplexes(231), null,
             2,

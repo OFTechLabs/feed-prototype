@@ -12,7 +12,7 @@ export class WhatsNewAMCardFactory implements CardFactory<AppModel> {
             return new CardFactoryResponse(
                 [new DynamicCard(
                     WhatsNewComponent,
-                    Math.round(Math.random() * 100),
+                    3,
                     {
                         title: 'AM 2018.9',
                         description: 'New version of AM is available! The new features can be seen in the demo below. It is now possible to use newlybuilt.',
