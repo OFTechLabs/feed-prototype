@@ -1,3 +1,5 @@
+@import '../variables';
+
 mat-sidenav {
     width: 200px;
     box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
@@ -13,7 +15,13 @@ mat-sidenav-container .mat-drawer-content {
 }
 
 .main-section {
+    font-family: $primary-font;
     overflow: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 64px;
 }
 
 .main-wrapper {

@@ -1,0 +1,5 @@
+@import '~@angular/material/theming';
+
+$primary-font: 'Roboto', sans-serif;
+
+$primary-700: map_get($mat-blue, 700);
