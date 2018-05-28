@@ -41,11 +41,11 @@ export class AppModelFactory {
                     250,
                     'Taxationmanager')
             ],
-            [], [], [], [], 
+            [], [], [], [],
             [new WhatsNewModel('AVM 2018.9',
                 'New version of AVM is available! The new features can be seen in the demo below. AVM now has a dashboard with the most relevant information about your properties.'
                 , 'https://www.youtube.com/embed/LD9Oaj0B5Cc', ['Go to AVM', 'Go to Dashboard'], () => {
-                })]
+                }, ['Taxationmanager'])]
         ),
             new ModuleDataSet(
                 'Ortec Finance',
@@ -94,7 +94,7 @@ export class AppModelFactory {
                     })], [], [new WhatsNewModel('AM 2018.9',
                     'New version of AM is available! The new features can be seen in the demo below. It is now possible to use newlybuilt.'
                     , 'https://www.youtube.com/embed/LD9Oaj0B5Cc', ['Go to AM', 'Go to Newlybuilt'], () => {
-                    })]
+                    }, ['Assetmanager'])]
             )];
     }
 }

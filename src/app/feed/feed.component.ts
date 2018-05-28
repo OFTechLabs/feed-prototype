@@ -6,7 +6,6 @@ import {AppModel} from '../AppModel';
 import {CardComponent} from './card/CardComponent';
 import {WhatsNewAMCardFactory} from './card/assetmanagementcards/whatsnew/WhatsNewAMCardFactory';
 import {ProgressCardFactory} from './card/assetmanagementcards/progress-card/ProgressCardFactory';
-import {ProposeVariantCardFactory} from './card/assetmanagementcards/reminder/ProposeVariantCardFactory';
 import {ComplexSessionReminderCardFactory} from './card/assetmanagementcards/reminder/ComplexSessionReminderCardFactory';
 import {AMThisQuarterModelFactory} from './card/assetmanagementcards/planning/AMThisQuarterModelFactory';
 import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFactory';
@@ -46,7 +45,6 @@ export class FeedComponent implements OnInit {
     loadCards() {
         const feedFactory = new FeedFactory<AppModel>([
             new ComplexSessionReminderCardFactory(),
-            new ProposeVariantCardFactory(),
             new AMThisQuarterModelFactory(),
             new ProgressCardFactory(),
             new WhatsNewAMCardFactory(),

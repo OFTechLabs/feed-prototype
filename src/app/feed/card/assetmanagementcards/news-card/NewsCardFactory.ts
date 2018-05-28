@@ -9,7 +9,7 @@ export class NewsCardFactory implements CardFactory<AppModel> {
         const cards = model.moduleData.map(entry => entry.NewsDataSet.map(dataPoint => {
             return new DynamicCard(
                 NewsCardComponent,
-                2,
+                4,
                 dataPoint
             );
         })).reduce((left, right) => left.concat(right), []);
