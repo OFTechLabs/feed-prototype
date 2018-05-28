@@ -25,6 +25,7 @@
     "@angular/pwa": "^0.6.3",
     "@angular/router": "^6.0.3",
     "@angular/service-worker": "^6.0.3",
+    "@oratio/oratio": "^0.0.10",
     "chart.js": "^2.7.2",
     "core-js": "^2.5.4",
     "ng2-charts": "^1.6.0",

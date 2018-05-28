@@ -39,6 +39,7 @@ export class AssetmanagementAppModelFactory {
                     'AM'
                 ),
             ],
+            null
         );
     }
 

@@ -31,8 +31,16 @@
         </mat-toolbar>
 
         <div class="main-section">
-            <div class="main-wrapper">
-                <feed [model]="model"></feed>
+            <div class="main-wrapper" fxLayout="column" fxLayoutAlign="space-around stretch">
+                <form fxLayout="row" fxLayoutAlign="start center" fxFlex="">
+                    <mat-form-field class="search-input" fxFlex="fill">
+                        <input name="query" matInput type="text" placeholder="How can I help?" [(ngModel)]="input"/>
+                        <mat-hint align="start">Our assistant can help you interact with the feed</mat-hint>
+                    </mat-form-field>
+                    <button mat-button class="mat-primary raised" type="submit" (click)="queryOratio()">Submit</button>
+                </form>
+
+                <feed [model]="model" fxFlex=""></feed>
             </div>
         </div>
     </mat-sidenav-content>

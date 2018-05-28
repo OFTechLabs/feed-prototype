@@ -1,5 +1,4 @@
 import {Component, ComponentFactoryResolver, Input, OnInit, ViewChild} from '@angular/core';
-import {DynamicCard} from './card/DynamicCard';
 import {CardDirective} from './card/card.directive';
 import {FeedFactory} from './FeedFactory';
 import {AppModel} from '../AppModel';
@@ -12,6 +11,7 @@ import {NewsCardFactory} from './card/assetmanagementcards/news-card/NewsCardFac
 import {AvmChartFeedFactory} from './card/assetmanagementcards/graphcards/ChartFeedFactory';
 import {UpdatesCardFactory} from './card/assetmanagementcards/update/UpdatesCardFactory';
 import {WarningCardsFactory} from './card/assetmanagementcards/warnings/WarningCardsFactory';
+import {CardsState} from './card/CardsState';
 
 @Component({
     selector: 'feed',
@@ -23,9 +23,10 @@ export class FeedComponent implements OnInit {
     @ViewChild(CardDirective) cardHost: CardDirective;
 
     private _model: AppModel;
-    cards: DynamicCard[];
 
-    constructor(private componentFactoryResolver: ComponentFactoryResolver) {
+    constructor(
+        public cardsState: CardsState
+    ) {
     }
 
     ngOnInit() {
@@ -39,7 +40,9 @@ export class FeedComponent implements OnInit {
     @Input()
     set model(model: AppModel) {
         this._model = model;
+        this.cardsState.cardHost = this.cardHost;
         this.loadCards();
+        this.cardsState.updateCards();
     }
 
     loadCards() {
@@ -54,20 +57,7 @@ export class FeedComponent implements OnInit {
             new WarningCardsFactory(),
         ]);
 
-        this.cards = feedFactory.create(this._model);
-
-        this.cardHost.viewContainerRef.clear();
-        this.cards.forEach(card => {
-            if (card) {
-                const componentFactory = this.componentFactoryResolver.resolveComponentFactory(card.component);
-                const viewContainerRef = this.cardHost.viewContainerRef;
-
-                const componentRef = viewContainerRef.createComponent(componentFactory);
-                (<CardComponent>componentRef.instance).data = card.data;
-                (<CardComponent>componentRef.instance).data.dismiss = () => {
-                    componentRef.destroy();
-                };
-            }
-        });
+        this.cardsState.cards = feedFactory.create(this._model);
     }
+
 }

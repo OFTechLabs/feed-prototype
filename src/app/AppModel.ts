@@ -14,7 +14,8 @@ export class AppModel {
                 public moduleData: ModuleDataSet[],
                 public quarter: number,
                 public updates: Update[],
-                public warnings: Warning[]) {
+                public warnings: Warning[],
+                public assistantResponse: string) {
     }
 }
 
