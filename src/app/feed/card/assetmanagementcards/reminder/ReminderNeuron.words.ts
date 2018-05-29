@@ -9,6 +9,7 @@ export const knownWords: LocalizedWords = {
             'what are my tasks',
             'my tasks',
             'todo',
+            'work',
         ],
         params: [],
         continuation: []

@@ -14,6 +14,8 @@ import {CardFactory} from './feed/card/CardFactory';
 import {UpdateNeuron} from './feed/card/assetmanagementcards/update/UpdateNeuron';
 import {WarningNeuron} from './feed/card/assetmanagementcards/warnings/WarningNeuron';
 import {ReminderNeuron} from './feed/card/assetmanagementcards/reminder/ReminderNeuron';
+import {SummaryNeuron} from './feed/card/assetmanagementcards/summary/SummaryNeuron';
+import {MonitorNeuron} from './feed/card/assetmanagementcards/summary/MonitorNeuron';
 
 @Component({
     selector: 'app-root',
@@ -46,6 +48,8 @@ export class AppComponent implements OnInit {
                 new UpdateNeuron(),
                 new WarningNeuron(),
                 new ReminderNeuron(),
+                new SummaryNeuron(),
+                new MonitorNeuron(),
             ])
             .build();
     }
@@ -67,10 +71,14 @@ export class AppComponent implements OnInit {
                 if (answer instanceof UnderstoodResponse) {
                     answer.action.call(answer.context, null);
                     const cardFactory = (answer.context as any).cardFactory;
+                    const cards = (answer.context as any).cards;
                     if (cardFactory) {
                         this.cardState.cards = this.cardState.cards.concat(
                             (cardFactory as CardFactory<AppModel>).create(this.model).cards
                         );
+                    }
+                    if (cards) {
+                        this.cardState.cards = this.cardState.cards.concat(cards);
                     }
                 }
             });

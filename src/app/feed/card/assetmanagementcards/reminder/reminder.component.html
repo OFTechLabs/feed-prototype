@@ -7,8 +7,10 @@
             </div>
             <div fxLayout="row" fxLayoutAlign="center center">
                 <div class="due_days" fxLayout="row" fxLayoutAlign="start center">
-                    <mat-icon>timer</mat-icon>
-                    <span>Due in {{data.daysLeft}} days</span>
+                    <mat-icon *ngIf="data.daysLeft >= 0">timer</mat-icon>
+                    <mat-icon *ngIf="data.daysLeft < 0" class="overdue">timer</mat-icon>
+                    <span *ngIf="data.daysLeft >= 0">Due in {{data.daysLeft}} days</span>
+                    <span *ngIf="data.daysLeft < 0" class="overdue">{{data.daysLeft * -1}} days overdue</span>
                 </div>
                 <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                     <mat-icon>more_vert</mat-icon>
