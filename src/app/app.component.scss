@@ -30,7 +30,7 @@ mat-sidenav-container .mat-drawer-content {
     bottom: 0;
     left: 0;
     right: 0;
-    top: 64px;
+    top: 164px;
 }
 
 .main-wrapper {
@@ -43,4 +43,13 @@ mat-sidenav-container .mat-drawer-content {
     width: 100%;
     padding-bottom: 20px;
     padding-top: 30px;
+}
+
+.card-feed__assistant {
+    margin: 0 0 16px 0;
+    padding: 16px;
+}
+
+.card-feed__assistant form .mat-raised-button {
+    margin-left: 16px;
 }

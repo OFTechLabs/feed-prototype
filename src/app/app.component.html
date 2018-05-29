@@ -30,17 +30,19 @@
             <app-profile [(model)]="model"></app-profile>
         </mat-toolbar>
 
-        <div class="main-section">
-            <div class="main-wrapper" fxLayout="column" fxLayoutAlign="space-around stretch">
-                <form fxLayout="row" fxLayoutAlign="start center" fxFlex="">
-                    <mat-form-field class="search-input" fxFlex="fill">
-                        <input name="query" matInput type="text" placeholder="How can I help?" [(ngModel)]="input"/>
-                        <mat-hint align="start">Our assistant can help you interact with the feed</mat-hint>
-                    </mat-form-field>
-                    <button mat-button class="mat-primary raised" type="submit" (click)="queryOratio()">Submit</button>
-                </form>
+        <div class="card-feed__assistant mat-elevation-z1">
+            <form fxLayout="row" fxLayoutAlign="start center">
+                <mat-form-field fxFlex="fill">
+                    <input name="query" matInput type="text" placeholder="How can I help?" [(ngModel)]="input"/>
+                    <mat-hint align="start">Our assistant can help you interact with the feed</mat-hint>
+                </mat-form-field>
+                <button mat-raised-button class="mat-primary" type="submit"  (click)="queryOratio()">Submit</button>
+            </form>
+        </div>
 
-                <feed [model]="model" fxFlex=""></feed>
+        <div class="main-section">
+            <div class="main-wrapper">
+                <feed [model]="model"></feed>
             </div>
         </div>
     </mat-sidenav-content>
