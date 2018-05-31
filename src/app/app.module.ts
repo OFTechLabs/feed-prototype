@@ -10,6 +10,7 @@ import {
     MatBadgeModule,
     MatButtonModule,
     MatCardModule,
+    MatDividerModule,
     MatGridListModule,
     MatIconModule,
     MatInputModule,
@@ -56,6 +57,7 @@ const MATERIAL_MODULES = [
     MatBadgeModule,
     MatInputModule,
     MatSlideToggleModule,
+    MatDividerModule,
 ];
 
 const appRoutes: Routes = [
