@@ -41,6 +41,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserSettingsComponent } from './user/user-settings/user-settings.component';
 import { NgxsModule } from '@ngxs/store';
 import { AppState } from './app.state';
+import { DemoComponent } from './demo/demo.component';
 
 const MATERIAL_MODULES = [
     MatToolbarModule,
@@ -60,7 +61,8 @@ const MATERIAL_MODULES = [
 const appRoutes: Routes = [
     {path: 'feed', component: FeedComponent},
     {path: 'user-settings', component: UserSettingsComponent},
-    {path: '**', redirectTo: 'feed', pathMatch: 'full'},
+    {path: 'home', component: DemoComponent},
+    {path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 @NgModule({
@@ -79,6 +81,7 @@ const appRoutes: Routes = [
         WarningComponent,
         AssistantComponent,
         UserSettingsComponent,
+        DemoComponent
     ],
     entryComponents: [
         WhatsNewComponent,
@@ -91,6 +94,7 @@ const appRoutes: Routes = [
         UpdateComponent,
         WarningComponent,
         AssistantComponent,
+        DemoComponent,
     ],
     imports: [
         BrowserModule,

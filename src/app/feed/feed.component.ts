@@ -24,6 +24,7 @@ import { AppState } from '../app.state';
 import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';
 import { UpdateFeedAssistanceResponse } from '../app.action';
+import { SalesPitchNeuron } from '../demo/SalesPitchNeuron';
 
 @Component({
     selector: 'feed',
@@ -55,6 +56,7 @@ export class FeedComponent implements OnInit {
                 new ReminderNeuron(),
                 new SummaryNeuron(),
                 new MonitorNeuron(),
+                new SalesPitchNeuron(),
             ]).build();
 
         this.model$.forEach((newModel: AppModel) => {
@@ -78,7 +80,6 @@ export class FeedComponent implements OnInit {
 
         this.cardsState.cards = feedFactory.create(model);
     }
-
 
     public queryOratio(model: AppModel): void {
         const result = this.mind.process(this.input, {language: () => 'en', region: () => 'en'}, model);
