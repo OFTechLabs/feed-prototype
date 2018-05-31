@@ -64,7 +64,7 @@ const appRoutes: Routes = [
     {path: 'feed', component: FeedComponent},
     {path: 'user-settings', component: UserSettingsComponent},
     {path: 'home', component: DemoComponent},
-    {path: '**', redirectTo: 'home', pathMatch: 'full'},
+    {path: '**', redirectTo: 'feed', pathMatch: 'full'},
 ];
 
 @NgModule({
