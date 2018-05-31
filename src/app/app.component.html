@@ -12,7 +12,7 @@
                 <mat-icon>home</mat-icon>
                 <span>Home</span>
             </a>
-            <a mat-list-item class="active-link">
+            <a mat-list-item routerLink="feed" routerLinkActive="active-link">
                 <mat-icon>rss_feed</mat-icon>
                 <span matBadge="7" matBadgeOverlap="false" matBadgeColor="warn">Feed</span>
             </a>
@@ -21,28 +21,20 @@
 
     <mat-sidenav-content>
         <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
-            <div fxLayout="row" fxLayoutAlign="start center">
+            <div fxLayout="row" routerLink="feed" fxLayoutAlign="start center">
                 <button mat-icon-button (click)="drawer.toggle()">
                     <mat-icon>menu</mat-icon>
                 </button>
                 <span>OF REM Feed</span>
             </div>
-            <app-profile [(model)]="model"></app-profile>
+            <app-profile></app-profile>
         </mat-toolbar>
-
-        <div class="card-feed__assistant mat-elevation-z1">
-            <form fxLayout="row" fxLayoutAlign="start center">
-                <mat-form-field fxFlex="fill">
-                    <input name="query" matInput type="text" placeholder="How can I help?" [(ngModel)]="input"/>
-                    <mat-hint align="start">Our assistant can help you interact with the feed</mat-hint>
-                </mat-form-field>
-                <button mat-raised-button class="mat-primary" type="submit"  (click)="queryOratio()">Submit</button>
-            </form>
-        </div>
 
         <div class="main-section">
             <div class="main-wrapper">
-                <feed [model]="model"></feed>
+                <router-outlet></router-outlet>
+
+                <!--<feed [model]="model"></feed>-->
             </div>
         </div>
     </mat-sidenav-content>
