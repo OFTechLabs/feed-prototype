@@ -36,6 +36,7 @@ import {FormsModule} from '@angular/forms';
 import {CardsState} from './feed/card/CardsState';
 import {I18nService} from './i18n/I18nService';
 import {AssistantComponent} from './feed/card/assetmanagementcards/assistant/assistant.component';
+import { DemoComponent } from './demo/demo.component';
 
 const MATERIAL_MODULES = [
     MatToolbarModule,
@@ -66,6 +67,7 @@ const MATERIAL_MODULES = [
         UpdateComponent,
         WarningComponent,
         AssistantComponent,
+        DemoComponent,
     ],
     entryComponents: [
         WhatsNewComponent,
