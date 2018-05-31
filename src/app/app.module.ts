@@ -80,6 +80,7 @@ const MATERIAL_MODULES = [
         UpdateComponent,
         WarningComponent,
         AssistantComponent,
+        DemoComponent,
     ],
     imports: [
         BrowserModule,

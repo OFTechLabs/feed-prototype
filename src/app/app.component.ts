@@ -9,13 +9,13 @@ import {CoreHiveMindModule, HiveMindBuilder, IHiveMind, MathHiveMindModule, Unde
 import {I18nService} from './i18n/I18nService';
 import {CardsState} from './feed/card/CardsState';
 import {ASSISTANT_FACTORY} from './feed/card/assetmanagementcards/assistant/AssistantCardFactory';
-import {AssistantComponent} from './feed/card/assetmanagementcards/assistant/assistant.component';
 import {CardFactory} from './feed/card/CardFactory';
 import {UpdateNeuron} from './feed/card/assetmanagementcards/update/UpdateNeuron';
 import {WarningNeuron} from './feed/card/assetmanagementcards/warnings/WarningNeuron';
 import {ReminderNeuron} from './feed/card/assetmanagementcards/reminder/ReminderNeuron';
 import {SummaryNeuron} from './feed/card/assetmanagementcards/summary/SummaryNeuron';
 import {MonitorNeuron} from './feed/card/assetmanagementcards/summary/MonitorNeuron';
+import {SalesPitchNeuron} from './demo/SalesPitchNeuron';
 
 @Component({
     selector: 'app-root',
@@ -50,6 +50,7 @@ export class AppComponent implements OnInit {
                 new ReminderNeuron(),
                 new SummaryNeuron(),
                 new MonitorNeuron(),
+                new SalesPitchNeuron(),
             ])
             .build();
     }
