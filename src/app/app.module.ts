@@ -67,6 +67,7 @@ const appRoutes: Routes = [
     {path: '**', redirectTo: 'feed', pathMatch: 'full'},
 ];
 
+
 @NgModule({
     declarations: [
         AppComponent,
