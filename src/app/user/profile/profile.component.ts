@@ -2,6 +2,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AppModel } from '../../AppModel';
 import { AppModelFactory } from '../../AppModelFactory';
 import { AssetmanagementAppModelFactory } from '../../AssetmanagementAppModelFactory';
+import { Observable } from 'rxjs';
+import { AppState } from '../../app.state';
+import { Select, Store } from '@ngxs/store';
+import { ChangeUser } from '../../app.action';
 
 @Component({
     selector: 'app-profile',
@@ -9,6 +13,7 @@ import { AssetmanagementAppModelFactory } from '../../AssetmanagementAppModelFac
     styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+    @Select(AppState) model$: Observable<AppModel>;
 
     @Input()
     public model: AppModel;
@@ -16,39 +21,38 @@ export class ProfileComponent implements OnInit {
     @Output()
     public modelChange: EventEmitter<AppModel> = new EventEmitter<AppModel>();
 
-    constructor() {
+    constructor(private store: Store) {
     }
 
     ngOnInit() {
     }
 
     public avmRole(): void {
-        this.adjustToRoles(['Taxationmanager']);
+        this.changeUser(['Taxationmanager']);
     }
 
     public amRole(): void {
-        this.adjustToRoles(['Assetmanager']);
+        this.changeUser(['Assetmanager']);
     }
 
     public allRoles(): void {
-        this.adjustToRoles(['Assetmanager', 'Taxationmanager']);
+        this.changeUser(['Assetmanager', 'Taxationmanager']);
     }
 
-    private adjustToRoles(roleNames: string[]) {
-        this.model = AssetmanagementAppModelFactory.create();
-        this.model.moduleData = AppModelFactory.create();
-        this.model.user.roles = roleNames;
-        this.modelChange.emit(this.model);
+    private changeUser(roleNames: string[]) {
+        this.store.dispatch(new ChangeUser(roleNames));
     }
 
-    public getUserRoleName() {
-        if (this.model.user.roles.length > 1) {
+    public getUserRoleName(roleNames: string[]) {
+        if (roleNames.length > 1) {
             return 'OF Consultant';
-        } else if (this.model.user.roles[0] === 'Taxationmanager') {
+        } else if (roleNames[0] === 'Taxationmanager') {
             return 'AVM User';
-        } else if (this.model.user.roles[0] === 'Assetmanager') {
+        } else if (roleNames[0] === 'Assetmanager') {
             return 'AM User';
         }
+
+        return 'Hacker';
     }
 
 }

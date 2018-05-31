@@ -1,0 +1,20 @@
+<div class="user-settings mat-elevation-z1">
+
+    <h3>Notifications</h3>
+    <p>If enabled, we will send you a notification when there is a new item in your feed. If you use the application on your mobile phone, we will send push notifications.</p>
+    <mat-list>
+        <mat-list-item>
+            <mat-slide-toggle [checked]="true">Push notifications</mat-slide-toggle>
+        </mat-list-item>
+    </mat-list>
+
+    <mat-divider></mat-divider>
+
+    <h3>Categories</h3>
+    <p>Here you can select which categories you want to show in the feed.</p>
+    <mat-list>
+        <mat-list-item *ngFor="let category of categories">
+            <mat-slide-toggle [checked]="true">{{category}}</mat-slide-toggle>
+        </mat-list-item>
+    </mat-list>
+</div>

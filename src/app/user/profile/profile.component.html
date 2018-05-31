@@ -1,9 +1,17 @@
 <button class="profile-menu__button" mat-button [matMenuTriggerFor]="menu">
     <mat-icon>person</mat-icon>
-    <span>{{getUserRoleName()}}</span>
+    <span>{{getUserRoleName((model$ | async).user.roles)}}</span>
 </button>
 
 <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="user-settings">
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="profiles">Roles</button>
+</mat-menu>
+
+<mat-menu #profiles="matMenu">
     <button mat-menu-item (click)="amRole()">AM User</button>
     <button mat-menu-item (click)="avmRole()">AVM User</button>
     <button mat-menu-item (click)="allRoles()">OF Consultant</button>

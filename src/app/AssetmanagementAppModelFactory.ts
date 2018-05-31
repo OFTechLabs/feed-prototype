@@ -1,4 +1,10 @@
-import {AppModel, Complex, Module, Update, User, Warning} from './AppModel';
+import { AppModel } from './AppModel';
+import { User } from './user/User';
+import { Module } from './models/Module';
+import { Update } from './models/Update';
+import { Warning } from './models/Warning';
+import { Complex } from './models/Complex';
+import { AppModelFactory } from './AppModelFactory';
 
 export class AssetmanagementAppModelFactory {
 
@@ -6,7 +12,8 @@ export class AssetmanagementAppModelFactory {
         return new AppModel(
             new User('Mark Rutte', 'markr', ['Assetmanager']),
             [new Module('AM'), new Module('AVM'), new Module('TMS'), new Module('VGR')],
-            AssetmanagementAppModelFactory.createComplexes(231), null,
+            AssetmanagementAppModelFactory.createComplexes(231),
+            AppModelFactory.create(),
             2,
             [
                 new Update(

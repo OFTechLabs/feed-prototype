@@ -1,10 +1,10 @@
-import {ModuleDataSet} from './AppModel';
-import {ChartDataArray} from './feed/card/assetmanagementcards/graphcards/ChartArrayModel';
-import {ProgressData} from './feed/card/assetmanagementcards/progress-card/ProgressModel';
-import {NewsData} from './feed/card/assetmanagementcards/news-card/NewsModel';
-import {Planning} from './feed/card/assetmanagementcards/planning/PlanningModel';
-import {WhatsNewModel} from './feed/card/assetmanagementcards/whatsnew/WhatsNewModel';
-import {ReminderModel} from './feed/card/assetmanagementcards/reminder/ReminderModel';
+import { ChartDataArray } from './feed/card/assetmanagementcards/graphcards/ChartArrayModel';
+import { ProgressData } from './feed/card/assetmanagementcards/progress-card/ProgressModel';
+import { NewsData } from './feed/card/assetmanagementcards/news-card/NewsModel';
+import { Planning } from './feed/card/assetmanagementcards/planning/PlanningModel';
+import { WhatsNewModel } from './feed/card/assetmanagementcards/whatsnew/WhatsNewModel';
+import { ReminderModel } from './feed/card/assetmanagementcards/reminder/ReminderModel';
+import { ModuleDataSet } from './models/ModuleDataSet';
 
 export class AppModelFactory {
 

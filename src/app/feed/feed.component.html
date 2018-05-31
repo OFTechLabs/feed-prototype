@@ -1,3 +1,13 @@
+<div class="card-feed__assistant mat-elevation-z1">
+    <form fxLayout="row" fxLayoutAlign="start center">
+        <mat-form-field fxFlex="fill">
+            <input name="query" matInput type="text" placeholder="How can I help?" [(ngModel)]="input"/>
+            <mat-hint align="start">Our assistant can help you interact with the feed</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button class="mat-primary" type="submit"  (click)="queryOratio()">Submit</button>
+    </form>
+</div>
+
 <div class="card-feed">
     <ng-template feedcard></ng-template>
 </div>
