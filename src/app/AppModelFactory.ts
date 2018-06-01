@@ -54,7 +54,7 @@ export class AppModelFactory {
                 [new NewsData({
                         title: 'Interactieve conjunctuurgrafiek', date: '2018-05-17T09:03:01+0200',
                         teaser: 'Conjunctuurcycli zijn een van de belangrijkste kenmerken (‘stylized facts’) die aangeven hoe assetprijzen, rentes, volatiliteiten en macro-economische variabelen zich in de realiteit gedragen.',
-                        imageUrl: '/feedprototype/assets/business.jpg'
+                        imageUrl: '/assets/business.jpg'
                     },
                     'http://insights.ortec-finance.com/nl-nl/2018/02/16/interactieve-conjunctuurgrafiek')], [], [], [], []
             ),
