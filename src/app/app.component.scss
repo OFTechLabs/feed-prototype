@@ -33,7 +33,13 @@ mat-sidenav-container .mat-drawer-content {
     top: 64px;
 }
 
-.main-wrapper {
+.main-section--feed {
+    @extend .main-section;
+
+    overflow: hidden;
+}
+
+/deep/ .main-wrapper {
     margin: auto;
     padding: 0 32px;
     max-width: 1200px;

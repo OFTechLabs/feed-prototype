@@ -1,5 +1,7 @@
 .card-feed {
-    margin: 16px 0 0 0;
+    margin: 16px auto;
+    max-width: 1200px;
+    padding: 0 32px;
 }
 
 /deep/ .card-feed__card {
@@ -19,7 +21,6 @@
 }
 
 .card-feed__assistant {
-    margin: 0 0 16px 0;
     padding: 16px;
 }
 
@@ -31,4 +32,13 @@
 
 .card-feed__assistant form .mat-raised-button {
     margin-left: 16px;
+}
+
+.card-feed__wrapper {
+    overflow: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 164px;
 }

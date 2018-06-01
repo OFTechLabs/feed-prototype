@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -15,9 +16,14 @@ export class AppComponent implements OnInit {
         );
 
     constructor(
-        private breakpointObserver: BreakpointObserver) {
+        private breakpointObserver: BreakpointObserver,
+        private route: ActivatedRoute) {
     }
 
     ngOnInit(): void {
+    }
+
+    public isOnFeed(): boolean {
+        return this.route.snapshot['_routerState'].url === '/feed';
     }
 }
