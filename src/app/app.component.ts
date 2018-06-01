@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {map} from 'rxjs/operators';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -21,6 +21,17 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        if (Notification) {
+            if ((Notification as any).permission === 'granted') {
+                setTimeout(() => new Notification('Q2 Reporting', {body: 'Reports of Q2 have been finished and handed in.'}), 60000);
+            } else {
+                (Notification as any).requestPermission().then(status => {
+                    if (status === 'granted') {
+                        setTimeout(() => new Notification('Q2 Reporting', {body: 'Reports of Q2 have been finished and handed in.'}), 60000);
+                    }
+                });
+            }
+        }
     }
 
     public isOnFeed(): boolean {
